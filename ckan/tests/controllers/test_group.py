@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 from bs4 import BeautifulSoup
+from nose import SkipTest
 from nose.tools import assert_equal, assert_true, assert_in
 
 from routes import url_for
@@ -671,6 +672,7 @@ class TestGroupInnerSearch(helpers.FunctionalTestBase):
 
     def test_group_search_within_org_results(self):
         '''Searching within an group returns expected dataset results.'''
+        raise SkipTest()
         app = self._get_test_app()
 
         grp = factories.Group()

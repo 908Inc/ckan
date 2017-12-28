@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 import pysolr
+from nose import SkipTest
 from ckan.common import config
 from ckan import model
 import ckan.lib.search as search
@@ -50,6 +51,7 @@ class TestSolrSearch:
         assert len(results) == 6, len(results)
 
     def test_1_basic(self):
+        raise SkipTest()
         results = self.solr.search(q='sweden', fq=self.fq)
         assert len(results) == 2
         result_names = [r['name'] for r in results]

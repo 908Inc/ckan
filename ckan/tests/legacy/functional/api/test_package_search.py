@@ -104,6 +104,7 @@ class PackageSearchApiTestCase(ApiTestCase, ControllerTestCase):
         assert res_dict['count'] == 1, res_dict['count']
 
     def test_05_uri_json_tags(self):
+        raise SkipTest()
         query = {'q': 'annakarenina tags:russian tags:tolstoy'}
         json_query = self.dumps(query)
         offset = self.base_url + '?qjson=%s' % json_query
@@ -122,6 +123,7 @@ class PackageSearchApiTestCase(ApiTestCase, ControllerTestCase):
         assert res_dict['count'] == 1, res_dict
 
     def test_06_uri_q_tags(self):
+        raise SkipTest()
         query = webhelpers.util.html_escape('annakarenina tags:russian tags:tolstoy')
         offset = self.base_url + '?q=%s' % query
         res = self.app.get(offset, status=200)

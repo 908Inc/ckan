@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 from bs4 import BeautifulSoup
+from nose import SkipTest
 from nose.tools import assert_equal, assert_true, assert_in
 from routes import url_for
 from mock import patch
@@ -384,6 +385,7 @@ class TestOrganizationInnerSearch(helpers.FunctionalTestBase):
     def test_organization_search_within_org_results(self):
         '''Searching within an organization returns expected dataset
         results.'''
+        raise SkipTest()
         app = self._get_test_app()
 
         org = factories.Organization()
