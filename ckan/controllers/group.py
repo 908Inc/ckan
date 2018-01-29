@@ -248,12 +248,12 @@ class GroupController(base.BaseController):
         q = c.q = request.params.get('q', '')
         # Search within group
         if c.group_dict.get('is_organization'):
-            q = '{q} {organization_id}'.format(
-                q=q, organization_id=c.group_dict.get('id'))
+            q = u'{q} {organization_id}'.format(
+                q=q, organization_id=c.group_dict.get('id').encode("utf-8"))
             qf += ' owner_org '
         else:
-            q = '{q} {groups}'.format(
-                q=q, groups= c.group_dict.get('name'))
+            q = u'{q} {groups}'.format(
+                q=q, groups=c.group_dict.get('name').encode("utf-8"))
             qf += ' groups '
 
         c.description_formatted = \
