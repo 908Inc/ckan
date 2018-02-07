@@ -274,7 +274,7 @@ class MultilingualDataset(SingletonPlugin):
             query_fields += ' title_%s^2 text_%s' % (lang, lang)
 
         if 'qf' in search_params:
-            search_params['qf'] += query_fields
+            search_params['qf'] += " %s" % query_fields
         else:
             search_params['qf'] = query_fields
 
