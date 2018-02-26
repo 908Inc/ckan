@@ -36,9 +36,10 @@ def translate_data_dict(data_dict):
                     if key == (u'organization',) and item == 'description':
                         terms.add(value[item])
                     else:
-                        terms.add(item)
+                        if isinstance(item, basestring):
+                            terms.add(item)
                 else:
-                    if isinstance(value, basestring):
+
                         terms.add(item)
 
     # Get the translations of all the terms (as a list of dictionaries).
