@@ -38,7 +38,8 @@ def translate_data_dict(data_dict):
                     else:
                         terms.add(item)
                 else:
-                    terms.add(item)
+                    if isinstance(value, basestring):
+                        terms.add(item)
 
     # Get the translations of all the terms (as a list of dictionaries).
     translations = get_action('term_translation_show')(
