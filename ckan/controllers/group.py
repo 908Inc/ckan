@@ -693,15 +693,15 @@ class GroupController(base.BaseController):
                     tuplize_dict(parse_params(request.params))))
                 data_dict['id'] = id
 
-                email = data_dict.get('email')
-
-                if email:
+                prob_email = data_dict.get('username')
+                user_by_email = model.User.by_email(prob_email)
+                user_by_name = model.User.get(prob_email)
+                if not user_by_email and not user_by_name:
                     user_data_dict = {
-                        'email': email,
+                        'email': prob_email,
                         'group_id': data_dict['id'],
                         'role': data_dict['role']
                     }
-                    del data_dict['email']
                     user_dict = self._action('user_invite')(
                         context, user_data_dict)
                     data_dict['username'] = user_dict['name']

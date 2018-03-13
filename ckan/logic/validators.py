@@ -560,6 +560,26 @@ def user_name_validator(key, data, errors, context):
             # existing user's name to that name.
             errors[key].append(_('That login name is not available.'))
 
+def user_email_validator(key, data, errors, context):
+    '''Validate a new user email.
+
+    Append an error message to ``errors[key]`` if a user named ``data[key]``
+    already exists. Otherwise, do nothing.
+
+    :raises ckan.lib.navl.dictization_functions.Invalid: if ``data[key]`` is
+        not a string
+    :rtype: None
+
+    '''
+    model = context['model']
+    new_user_email = data[key]
+
+    if not isinstance(new_user_email, basestring):
+        raise Invalid(_('User emails must be strings'))
+    user = model.User.by_email(new_user_email)
+    if user:
+        errors[key].append(_('That email is not available.'))
+
 def user_both_passwords_entered(key, data, errors, context):
 
     password1 = data.get(('password1',),None)
