@@ -2,10 +2,9 @@
 from sqlalchemy import *
 from migrate import *
 
+
 def upgrade(migrate_engine):
-    migrate_engine.execute(
-        '''
-        ALTER TABLE "user"
-        ADD UNIQUE (email);
-        '''
-    )
+    metadata = MetaData()
+    metadata.bind = migrate_engine
+    user_sql = 'ALTER TABLE "user" ADD UNIQUE (email);'
+    migrate_engine.execute(user_sql)
