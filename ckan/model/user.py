@@ -25,7 +25,7 @@ user_table = Table('user', meta.metadata,
         Column('openid', types.UnicodeText),
         Column('password', types.UnicodeText),
         Column('fullname', types.UnicodeText),
-        Column('email', types.UnicodeText),
+        Column('email', types.UnicodeText, unique=True),
         Column('apikey', types.UnicodeText, default=_types.make_uuid),
         Column('created', types.DateTime, default=datetime.datetime.now),
         Column('reset_key', types.UnicodeText),
@@ -292,6 +292,7 @@ class User(vdm.sqlalchemy.StatefulObjectMixin,
             cls.name.ilike(qstr),
             cls.fullname.ilike(qstr),
             cls.openid.ilike(qstr),
+            cls.email.ilike(qstr)
         ]
         # sysadmins can search on user emails
         import ckan.authz as authz

@@ -70,7 +70,8 @@ from ckan.logic.validators import (
     extra_key_not_in_root_schema,
     empty_if_not_sysadmin,
     package_id_does_not_exist,
-    email_validator
+    email_validator,
+    user_email_validator
     )
 
 
@@ -406,7 +407,7 @@ def default_user_schema():
         'password': [user_password_validator, user_password_not_empty,
                      ignore_missing, unicode],
         'password_hash': [ignore_missing, ignore_not_sysadmin, unicode],
-        'email': [not_empty, unicode],
+        'email': [not_empty, unicode, user_email_validator],
         'about': [ignore_missing, user_about_validator, unicode],
         'created': [ignore],
         'openid': [ignore_missing],
