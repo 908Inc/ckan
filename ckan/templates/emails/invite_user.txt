@@ -1,17 +1,17 @@
-Dear {{ user_name }},
+{% trans %}Dear{% endtrans %} {{ user_name }},
 
-You have been invited to {{ site_title }}.
+{% trans %}You have been invited to{% endtrans %}{{ site_title }}.
 
-A user has already been created for you with the username {{ user_name }}. You can change it later.
+{% trans %}A user has already been created for you with the username{% endtrans %} {{ user_name }}. {% trans %}You can change it later.{% endtrans %}
 
-You have been added to the {{ group_type }} {{ group_title }} with the following role: {{ role_name }}.
+{% trans %}You have been added to the{% endtrans %} {{ group_type }} {{ group_title }} {% trans %}with the following role:{% endtrans %} {{ role_name }}.
 
-To accept this invite, please reset your password at:
+{% trans %}To accept this invite, please reset your password at:{% endtrans %}
 
    {{ reset_link }}
 
 
-Have a nice day.
+{% trans %}Have a nice day.{% endtrans %}
 
 --
-Message sent by {{ site_title }} ({{ site_url }})
+{% trans %}Message sent by{% endtrans %} {{ site_title }} ({{ site_url }})
