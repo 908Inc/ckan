@@ -3,14 +3,14 @@
 import logging
 import re
 
+import ckan.authz as authz
 import ckan.controllers.group as group
-import ckan.plugins as plugins
 import ckan.lib.base as base
 import ckan.lib.helpers as h
 import ckan.lib.navl.dictization_functions as dict_fns
 import ckan.logic as logic
 import ckan.model as model
-import ckan.authz as authz
+import ckan.plugins as plugins
 from ckan.common import c, request, _
 
 log = logging.getLogger(__name__)
