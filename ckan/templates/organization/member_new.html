@@ -16,23 +16,12 @@
     <div class="row-fluid">
       <div class="control-group control-medium">
         {% if not user %}
-          <label class="control-label" for="username">
-            {{ _('Existing User') }}
-          </label>
           <span>
-            {{ _('If you wish to add an existing user, search for their username below.') }}
+            {{ _('If you wish to add an existing user, write their email below.') }}
           </span>
         {% endif %}
         <div class="controls">
-          {% if user %}
-            <input type="hidden" name="username" value="{{ user.name }}" />
-            <input id="username" name="username" type="text" value="{{ user.name }}"
-            disabled="True" class="control-medium">
-          {% else %}
-             <input id="username" type="text" name="username" placeholder="{{ _('Username') }}"
-            value="" class="control-medium" data-module="autocomplete"
-            data-module-source="/api/2/util/user/autocomplete?q=?">
-          {% endif %}
+             <input id="email" type="email" name="email" placeholder="{{ _('Email') }}" value="" class="control-medium" >
         </div>
       </div>
     </div>
