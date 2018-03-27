@@ -578,7 +578,18 @@ def user_email_validator(key, data, errors, context):
         raise Invalid(_('User emails must be strings'))
     user = model.User.by_email(new_user_email)
     if user:
-        errors[key].append(_('That email is not available.'))
+        user = user[0] # by_email return list
+        user_obj_from_context = context.get('user_obj')
+        if user_obj_from_context and user_obj_from_context.id == user.id:
+            # If there's a user_obj in context with the same id as the user
+            # found in the db, then we must be doing a user_update and not
+            # updating the user name, so don't return an error.
+            return
+        else:
+            # Otherwise return an error: there's already another user with that
+            # name, so you can create a new user with that name or update an
+            # existing user's name to that name.
+            errors[key].append(_('That email is not available.'))
 
 def user_both_passwords_entered(key, data, errors, context):
 
