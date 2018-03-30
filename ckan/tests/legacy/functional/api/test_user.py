@@ -137,7 +137,7 @@ class TestCreateUserApiEnabled(PylonsTestCase):
     def test_user_create_api_enabled_sysadmin(self):
         params = {
             'name': 'testinganewusersysadmin',
-            'email': 'testinganewuser@ckan.org',
+            'email': 'testinganewusersysadmin1@ckan.org',
             'password': 'random',
         }
         res = self.app.post(
