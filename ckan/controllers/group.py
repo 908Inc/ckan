@@ -244,17 +244,12 @@ class GroupController(base.BaseController):
                    'user': c.user,
                    'schema': self._db_to_form_schema(group_type=group_type),
                    'for_view': True, 'extras_as_string': True}
-        qf = ''
         q = c.q = request.params.get('q', '')
         # Search within group
         if c.group_dict.get('is_organization'):
-            q = u'{q} {organization_id}'.format(
-                q=q, organization_id=c.group_dict.get('id').encode("utf-8"))
-            qf += ' owner_org '
+            q += ' owner_org:"%s"' % c.group_dict.get('id')
         else:
-            q = u'{q} {groups}'.format(
-                q=q, groups=c.group_dict.get('name').encode("utf-8"))
-            qf += ' groups '
+            q += ' groups:"%s"' % c.group_dict.get('name')
 
         c.description_formatted = \
             h.render_markdown(c.group_dict.get('description'))
@@ -341,8 +336,7 @@ class GroupController(base.BaseController):
                 'rows': limit,
                 'sort': sort_by,
                 'start': (page - 1) * limit,
-                'extras': search_extras,
-                'qf': qf
+                'extras': search_extras
             }
 
             context_ = dict((k, v) for (k, v) in context.items()
