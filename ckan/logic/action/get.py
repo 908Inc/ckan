@@ -381,7 +381,7 @@ def _group_or_org_list(context, data_dict, is_org=False):
         query = query.filter(_or_(
             model.Group.name.ilike(q),
             model.Group.title.ilike(q),
-            model.Group.description.ilike(q),
+            # model.Group.description.ilike(q),
         ))
 
     query = query.filter(model.Group.is_organization == is_org)
