@@ -291,7 +291,7 @@ class ResourceUpload(object):
                 if current_size > max_size:
                     os.remove(tmp_filepath)
                     raise logic.ValidationError(
-                        {'upload': ['File upload too large']}
+                        {'upload': ['File upload too large. Max size: {} M, current_size: {} M'.format(max_size, current_size)]}
                     )
 
             output_file.close()
