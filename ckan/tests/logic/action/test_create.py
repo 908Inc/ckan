@@ -96,7 +96,7 @@ class TestUserInvite(object):
             'user': user['name']
         }
         params = {
-            'email': 'a@example.com',
+            'email': 'test_raises_not_found@examlpe.com',
             'group_id': 'group_not_found',
             'role': 'admin'
         }
@@ -1145,7 +1145,7 @@ class TestUserCreate(helpers.FunctionalTestBase):
         user = helpers.call_action(
             'user_create',
             context=context,
-            email='test@example.com',
+            email='test_user_create_with_password_hash@example.com',
             name='test',
             password_hash='pretend-this-is-a-valid-hash')
 
@@ -1161,7 +1161,7 @@ class TestUserCreate(helpers.FunctionalTestBase):
         user = helpers.call_action(
             'user_create',
             context=context,
-            email='test@example.com',
+            email='create_password_hash_not_for_normal_users@example.com',
             name='test',
             password='required',
             password_hash='pretend-this-is-a-valid-hash')
