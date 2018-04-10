@@ -21,7 +21,7 @@
           </span>
         {% endif %}
         <div class="controls">
-             <input id="email" type="email" name="email" placeholder="{% if user %}{% else %}{{ _('Email') }}{% endif %}" value="{% if user %}{{ user.email }}{% endif %}" class="control-medium" >
+             <input id="email" type="email" name="email" placeholder="{% if not user %}{{ _('Email') }}{% endif %}" value="{% if user %}{{ user.email }}{% endif %}" class="control-medium" >
         </div>
       </div>
     </div>
