@@ -61,7 +61,7 @@ class TestAuth(tests.WsgiAppCase):
     def create_user(cls, name):
         user = {'name': name,
                 'password': 'pass',
-                'email': 'moo@moo.com'}
+                'email': '{}@moo.com'.format(name)}
         res = cls._call_api('user_create', user, 'sysadmin', 200)
         cls.apikeys[name] = str(json.loads(res.body)['result']['apikey'])
 
