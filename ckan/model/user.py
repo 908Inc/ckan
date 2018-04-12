@@ -291,8 +291,7 @@ class User(vdm.sqlalchemy.StatefulObjectMixin,
         filters = [
             cls.name.ilike(qstr),
             cls.fullname.ilike(qstr),
-            cls.openid.ilike(qstr),
-            cls.email.ilike(qstr)
+            cls.openid.ilike(qstr)
         ]
         # sysadmins can search on user emails
         import ckan.authz as authz
