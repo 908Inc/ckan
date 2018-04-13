@@ -26,7 +26,7 @@
     },
 
     /* Simple helper function for both GET's and POST's to the ckan API
-     * 
+     *
      * type - GET or POST
      * path - The API endpoint
      * data - Any data you need passing to the endpoint
@@ -172,7 +172,7 @@
         key = key ? key : item;
         label = label ? label : item;
 
-        var lowercased = item.toLowerCase();
+        var lowercased = item; // Fix for case sensitive. For switch off change on: item.toLowerCase();
         var returnObject = options && options.objects === true;
 
         if (lowercased && !map[lowercased]) {
