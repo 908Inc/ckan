@@ -3,4 +3,5 @@
 // directory itself is tracked.
 
 *.js
+!uk_UA.js
 
