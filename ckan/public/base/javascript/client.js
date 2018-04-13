@@ -27,7 +27,6 @@
 
     /* Simple helper function for both GET's and POST's to the ckan API
      *
-     *
      * type - GET or POST
      * path - The API endpoint
      * data - Any data you need passing to the endpoint
