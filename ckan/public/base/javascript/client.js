@@ -172,8 +172,7 @@
         key = key ? key : item;
         label = label ? label : item;
 
-        // var lowercased = item.toLowerCase();
-        var lowercased = item;  // Fix case sensitive
+        var lowercased = item;  // Fix case sensitive for to turn off: item.toLowerCase()
         var returnObject = options && options.objects === true;
 
         if (lowercased && !map[lowercased]) {
