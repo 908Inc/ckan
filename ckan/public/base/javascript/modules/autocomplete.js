@@ -76,7 +76,7 @@ this.ckan.module('autocomplete', function (jQuery) {
       if (this.options.tags && select2 && select2.search) {
         // find the "fake" input created by select2 and add the keypress event.
         // This is not part of the plugins API and so may break at any time.
-        select2.search.on('keydown', this._onKeydown);
+        select2.search.on('keypress', this._onKeydown);
       }
 
       // This prevents Internet Explorer from causing a window.onbeforeunload
