@@ -4132,7 +4132,7 @@ msgstr "Деталі змін"
 #: ckan/templates/user/request_reset.html:16
 #: ckan/templates/user/snippets/login_form.html:20
 msgid "Username"
-msgstr "Ім'я користувача"
+msgstr "Логін"
 
 #: ckan/templates/user/edit_user_form.html:10
 msgid "Full name"
@@ -4278,7 +4278,7 @@ msgstr ""
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
-msgstr "ім'я користувача"
+msgstr "логін"
 
 #: ckan/templates/user/new_user_form.html:6
 msgid "Full Name"
@@ -4351,7 +4351,7 @@ msgid ""
 "Enter your username into the box and we will send you an email with a "
 "link to enter a new password."
 msgstr ""
-"Введіть ім'я користувача в поле і ми надішлемо вам лист з посиланням для "
+"Введіть логін користувача в поле і ми надішлемо вам лист з посиланням для "
 "введення нового пароля."
 
 #: ckan/templates/user/snippets/followee_dropdown.html:14
