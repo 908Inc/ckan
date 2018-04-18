@@ -32,7 +32,7 @@ class TestRegisterUser(helpers.FunctionalTestBase):
         form = response.forms['user-register-form']
         form['name'] = 'newuser'
         form['fullname'] = 'New User'
-        form['email'] = 'test@test.com'
+        form['email'] = 'newuser@test.com'
         form['password1'] = 'TestPassword1'
         form['password2'] = 'TestPassword1'
         response = submit_and_follow(app, form, name='save')
@@ -71,7 +71,7 @@ class TestRegisterUser(helpers.FunctionalTestBase):
         # ...it's the second one
         login_form = response.forms[1]
         # fill it in
-        login_form['login'] = sysadmin['name']
+        login_form['login'] = sysadmin['email']
         login_form['password'] = admin_pass
         # submit it
         login_form.submit('save')
@@ -83,7 +83,7 @@ class TestRegisterUser(helpers.FunctionalTestBase):
         form = response.forms['user-register-form']
         form['name'] = 'newestuser'
         form['fullname'] = 'Newest User'
-        form['email'] = 'test@test.com'
+        form['email'] = 'newuser1@test.com'
         form['password1'] = 'NewPassword1'
         form['password2'] = 'NewPassword1'
         response2 = form.submit('save')
@@ -107,7 +107,7 @@ class TestLoginView(helpers.FunctionalTestBase):
         login_form = response.forms[1]
 
         # fill it in
-        login_form['login'] = user['name']
+        login_form['login'] = user['email']
         login_form['password'] = 'RandomPassword123'
 
         # submit it
@@ -138,7 +138,7 @@ class TestLoginView(helpers.FunctionalTestBase):
         login_form = response.forms[1]
 
         # fill it in
-        login_form['login'] = user['name']
+        login_form['login'] = user['email']
         login_form['password'] = 'BadPass1'
 
         # submit it
@@ -335,7 +335,7 @@ class TestUserEdit(helpers.FunctionalTestBase):
         # ...it's the second one
         login_form = response.forms[1]
         # fill it in
-        login_form['login'] = user['name']
+        login_form['login'] = user['email']
         login_form['password'] = user_pass
         # submit it
         login_form.submit()
@@ -364,7 +364,7 @@ class TestUserEdit(helpers.FunctionalTestBase):
         # ...it's the second one
         login_form = response.forms[1]
         # fill it in
-        login_form['login'] = user['name']
+        login_form['login'] = user['email']
         login_form['password'] = user_pass
         # submit it
         login_form.submit()
@@ -393,7 +393,7 @@ class TestUserEdit(helpers.FunctionalTestBase):
         # ...it's the second one
         login_form = response.forms[1]
         # fill it in
-        login_form['login'] = user['name']
+        login_form['login'] = user['email']
         login_form['password'] = user_pass
         # submit it
         login_form.submit()
