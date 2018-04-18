@@ -261,12 +261,12 @@ class TestAction(WsgiAppCase):
         normal_user_dict = {'id': self.normal_user.id,
                             'name': self.normal_user.name,
                             'fullname': 'Updated normal user full name',
-                            'email': 'me@test.org',
+                            'email': 'me_user@test.org',
                             'about':'Updated normal user about'}
 
         sysadmin_user_dict = {'id': self.sysadmin_user.id,
                             'fullname': 'Updated sysadmin user full name',
-                            'email': 'me@test.org',
+                            'email': 'me_admin@test.org',
                             'about':'Updated sysadmin user about'}
 
         #Normal users can update themselves
