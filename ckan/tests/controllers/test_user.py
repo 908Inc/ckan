@@ -108,7 +108,7 @@ class TestLoginView(helpers.FunctionalTestBase):
 
         # fill it in
         login_form['login'] = user['email']
-        login_form['password'] = 'RandomPassword123'
+        login_form['password'] = 'pass'
 
         # submit it
         submit_response = login_form.submit()
@@ -325,7 +325,7 @@ class TestUserEdit(helpers.FunctionalTestBase):
 
     def test_edit_user_logged_in_username_change(self):
 
-        user_pass = 'TestPassword1'
+        user_pass = 'pass'
         user = factories.User(password=user_pass)
         app = self._get_test_app()
 
@@ -354,8 +354,8 @@ class TestUserEdit(helpers.FunctionalTestBase):
         assert_true('That login name can not be modified' in response)
 
     def test_edit_user_logged_in_username_change_by_name(self):
-        user_pass = 'TestPassword1'
-        user = factories.User(password=user_pass)
+        user_pass = 'pass'
+        user = factories.User()
         app = self._get_test_app()
 
         # Have to do an actual login as this test relys on repoze cookie handling.
@@ -438,8 +438,8 @@ class TestUserEdit(helpers.FunctionalTestBase):
 
         form = response.forms['user-edit-form']
 
-        # factory returns user with password 'RandomPassword123'
-        form.fields['old_password'][0].value = 'RandomPassword123'
+        # factory returns user with password 'pass'
+        form.fields['old_password'][0].value = 'pass'
         form.fields['password1'][0].value = 'NewPassword1'
         form.fields['password2'][0].value = 'NewPassword1'
 
