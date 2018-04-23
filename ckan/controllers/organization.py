@@ -28,7 +28,6 @@ clean_dict = logic.clean_dict
 parse_params = logic.parse_params
 
 
-
 class OrganizationController(group.GroupController):
     ''' The organization controller is for Organizations, which are implemented
     as Groups with is_organization=True and group_type='organization'. It works
