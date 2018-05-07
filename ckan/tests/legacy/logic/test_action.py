@@ -661,7 +661,10 @@ class TestAction(WsgiAppCase):
         except ImportError:
             raise SkipTest('celery not installed')
 
-        backend = celery_app.celery.backend
+        try:
+            backend = celery_app.celery.backend
+        except AttributeError:
+            raise SkipTest('test error for redis celery backend')
         ##This creates the database tables as a side effect, can not see another way
         ##to make tables unless you actually create a task.
         celery_result_session = backend.ResultSession()
