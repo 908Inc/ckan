@@ -660,14 +660,15 @@ class TestAction(WsgiAppCase):
             import ckan.lib.celery_app as celery_app
         except ImportError:
             raise SkipTest('celery not installed')
-
-        try:
-            backend = celery_app.celery.backend
-        except AttributeError:
-            raise SkipTest('test error for redis celery backend')
+            
+        backend = celery_app.celery.backend
+        
         ##This creates the database tables as a side effect, can not see another way
         ##to make tables unless you actually create a task.
-        celery_result_session = backend.ResultSession()
+        try:
+            celery_result_session = backend.ResultSession()
+        except AttributeError:
+            raise SkipTest('test error for redis celery backend')
 
         ## need to do inserts as setting up an embedded celery is too much for these tests
         model.Session.connection().execute(
