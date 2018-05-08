@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-26 11:53+0000\n"
+"POT-Creation-Date: 2018-05-08 11:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -127,7 +127,7 @@ msgstr ""
 #: ckan/logic/validators.py:191 ckan/logic/validators.py:200
 #: ckan/logic/validators.py:214 ckan/logic/validators.py:231
 #: ckan/logic/validators.py:244 ckan/logic/validators.py:268
-#: ckan/logic/validators.py:726
+#: ckan/logic/validators.py:737
 msgid "Not found"
 msgstr ""
 
@@ -222,13 +222,13 @@ msgid "Request params must be in form of a json encoded dictionary."
 msgstr ""
 
 #: ckan/controllers/feed.py:233 ckan/controllers/group.py:137
-#: ckan/controllers/group.py:235 ckan/controllers/group.py:408
-#: ckan/controllers/group.py:518 ckan/controllers/group.py:551
-#: ckan/controllers/group.py:581 ckan/controllers/group.py:592
-#: ckan/controllers/group.py:646 ckan/controllers/group.py:664
-#: ckan/controllers/group.py:725 ckan/controllers/group.py:757
-#: ckan/controllers/group.py:790 ckan/controllers/group.py:847
-#: ckan/controllers/group.py:944 ckan/controllers/organization.py:112
+#: ckan/controllers/group.py:235 ckan/controllers/group.py:402
+#: ckan/controllers/group.py:512 ckan/controllers/group.py:545
+#: ckan/controllers/group.py:575 ckan/controllers/group.py:586
+#: ckan/controllers/group.py:640 ckan/controllers/group.py:658
+#: ckan/controllers/group.py:719 ckan/controllers/group.py:751
+#: ckan/controllers/group.py:784 ckan/controllers/group.py:841
+#: ckan/controllers/group.py:938 ckan/controllers/organization.py:111
 #: ckan/controllers/package.py:1246 ckan/controllers/package.py:1261
 #: ckan/logic/action/create.py:1398
 msgid "Group not found"
@@ -238,11 +238,11 @@ msgstr ""
 msgid "Organization not found"
 msgstr ""
 
-#: ckan/controllers/group.py:139 ckan/controllers/group.py:595
+#: ckan/controllers/group.py:139 ckan/controllers/group.py:589
 msgid "Incorrect group type"
 msgstr ""
 
-#: ckan/controllers/group.py:319 ckan/controllers/home.py:61
+#: ckan/controllers/group.py:314 ckan/controllers/home.py:61
 #: ckan/controllers/package.py:240 ckan/lib/helpers.py:854
 #: ckan/templates/header.html:104 ckan/templates/organization/edit_base.html:5
 #: ckan/templates/organization/edit_base.html:8
@@ -254,7 +254,7 @@ msgstr ""
 msgid "Organizations"
 msgstr ""
 
-#: ckan/controllers/group.py:320 ckan/controllers/home.py:62
+#: ckan/controllers/group.py:315 ckan/controllers/home.py:62
 #: ckan/controllers/package.py:241 ckan/lib/helpers.py:855
 #: ckan/templates/group/base_form_page.html:6 ckan/templates/group/edit.html:4
 #: ckan/templates/group/edit_base.html:4 ckan/templates/group/edit_base.html:10
@@ -267,7 +267,7 @@ msgstr ""
 msgid "Groups"
 msgstr ""
 
-#: ckan/controllers/group.py:321 ckan/controllers/home.py:63
+#: ckan/controllers/group.py:316 ckan/controllers/home.py:63
 #: ckan/controllers/package.py:242 ckan/lib/helpers.py:856
 #: ckan/logic/__init__.py:109
 #: ckan/templates/package/snippets/package_basic_fields.html:24
@@ -276,17 +276,17 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: ckan/controllers/group.py:322 ckan/controllers/home.py:64
+#: ckan/controllers/group.py:317 ckan/controllers/home.py:64
 #: ckan/controllers/package.py:243 ckan/lib/helpers.py:857
 msgid "Formats"
 msgstr ""
 
-#: ckan/controllers/group.py:323 ckan/controllers/home.py:65
+#: ckan/controllers/group.py:318 ckan/controllers/home.py:65
 #: ckan/controllers/package.py:244 ckan/lib/helpers.py:858
 msgid "Licenses"
 msgstr ""
 
-#: ckan/controllers/group.py:410 ckan/controllers/group.py:527
+#: ckan/controllers/group.py:404 ckan/controllers/group.py:521
 #: ckan/controllers/package.py:326 ckan/controllers/package.py:557
 #: ckan/controllers/package.py:770 ckan/controllers/package.py:1390
 #: ckan/controllers/package.py:1424
@@ -294,95 +294,95 @@ msgstr ""
 msgid "User %r not authorized to edit %s"
 msgstr ""
 
-#: ckan/controllers/group.py:457
+#: ckan/controllers/group.py:451
 msgid "Not authorized to perform bulk update"
 msgstr ""
 
-#: ckan/controllers/group.py:475
+#: ckan/controllers/group.py:469
 msgid "Unauthorized to create a group"
 msgstr ""
 
-#: ckan/controllers/group.py:553 ckan/controllers/group.py:583
+#: ckan/controllers/group.py:547 ckan/controllers/group.py:577
 #: ckan/controllers/package.py:925 ckan/controllers/package.py:973
 #: ckan/controllers/user.py:249 ckan/controllers/user.py:379
 #: ckan/controllers/user.py:546
 msgid "Integrity Error"
 msgstr ""
 
-#: ckan/controllers/group.py:609
+#: ckan/controllers/group.py:603
 #, python-format
 msgid "User %r not authorized to edit %s authorizations"
 msgstr ""
 
-#: ckan/controllers/group.py:629 ckan/controllers/group.py:644
+#: ckan/controllers/group.py:623 ckan/controllers/group.py:638
 #, python-format
 msgid "Unauthorized to delete group %s"
 msgstr ""
 
-#: ckan/controllers/group.py:635
+#: ckan/controllers/group.py:629
 msgid "Organization has been deleted."
 msgstr ""
 
-#: ckan/controllers/group.py:637
+#: ckan/controllers/group.py:631
 msgid "Group has been deleted."
 msgstr ""
 
-#: ckan/controllers/group.py:639
+#: ckan/controllers/group.py:633
 #, python-format
 msgid "%s has been deleted."
 msgstr ""
 
-#: ckan/controllers/group.py:668
+#: ckan/controllers/group.py:662
 #, python-format
 msgid "User %r not authorized to edit members of %s"
 msgstr ""
 
-#: ckan/controllers/group.py:681 ckan/controllers/organization.py:66
+#: ckan/controllers/group.py:675 ckan/controllers/organization.py:65
 #, python-format
 msgid "Unauthorized to create group %s members"
 msgstr ""
 
-#: ckan/controllers/group.py:723 ckan/controllers/organization.py:110
+#: ckan/controllers/group.py:717 ckan/controllers/organization.py:109
 #, python-format
 msgid "Unauthorized to add member to group %s"
 msgstr ""
 
-#: ckan/controllers/group.py:742 ckan/controllers/group.py:755
+#: ckan/controllers/group.py:736 ckan/controllers/group.py:749
 #, python-format
 msgid "Unauthorized to delete group %s members"
 msgstr ""
 
-#: ckan/controllers/group.py:749
+#: ckan/controllers/group.py:743
 msgid "Group member has been deleted."
 msgstr ""
 
-#: ckan/controllers/group.py:773 ckan/controllers/package.py:417
+#: ckan/controllers/group.py:767 ckan/controllers/package.py:417
 msgid "Select two revisions before doing the comparison."
 msgstr ""
 
-#: ckan/controllers/group.py:797
+#: ckan/controllers/group.py:791
 msgid "CKAN Group Revision History"
 msgstr ""
 
-#: ckan/controllers/group.py:801
+#: ckan/controllers/group.py:795
 msgid "Recent changes to CKAN Group: "
 msgstr ""
 
-#: ckan/controllers/group.py:822 ckan/controllers/package.py:468
+#: ckan/controllers/group.py:816 ckan/controllers/package.py:468
 msgid "Log message: "
 msgstr ""
 
-#: ckan/controllers/group.py:872 ckan/controllers/package.py:1174
+#: ckan/controllers/group.py:866 ckan/controllers/package.py:1174
 #: ckan/controllers/user.py:713
 msgid "You are now following {0}"
 msgstr ""
 
-#: ckan/controllers/group.py:892 ckan/controllers/package.py:1193
+#: ckan/controllers/group.py:886 ckan/controllers/package.py:1193
 #: ckan/controllers/user.py:733
 msgid "You are no longer following {0}"
 msgstr ""
 
-#: ckan/controllers/group.py:912 ckan/controllers/user.py:578
+#: ckan/controllers/group.py:906 ckan/controllers/user.py:578
 #, python-format
 msgid "Unauthorized to view followers %s"
 msgstr ""
@@ -1036,7 +1036,7 @@ msgstr ""
 #: ckan/lib/navl/dictization_functions.py:35 ckan/lib/navl/validators.py:25
 #: ckan/lib/navl/validators.py:32 ckan/lib/navl/validators.py:52
 #: ckan/logic/action/get.py:2083 ckan/logic/action/update.py:259
-#: ckan/logic/validators.py:627
+#: ckan/logic/validators.py:638
 msgid "Missing value"
 msgstr ""
 
@@ -1077,7 +1077,7 @@ msgid "Tag vocabulary \"%s\" does not exist"
 msgstr ""
 
 #: ckan/logic/converters.py:121 ckan/logic/validators.py:214
-#: ckan/logic/validators.py:231 ckan/logic/validators.py:726
+#: ckan/logic/validators.py:231 ckan/logic/validators.py:737
 #: ckan/templates/group/members.html:14 ckan/templates/organization/members.html:19
 #: ckanext/stats/templates/ckanext/stats/index.html:156
 msgid "User"
@@ -1159,7 +1159,7 @@ msgstr ""
 msgid "Must be at least %s characters long"
 msgstr ""
 
-#: ckan/logic/validators.py:340 ckan/logic/validators.py:643
+#: ckan/logic/validators.py:340 ckan/logic/validators.py:654
 #, python-format
 msgid "Name must be a maximum of %i characters long"
 msgstr ""
@@ -1228,105 +1228,105 @@ msgstr ""
 msgid "User emails must be strings"
 msgstr ""
 
-#: ckan/logic/validators.py:581
+#: ckan/logic/validators.py:592
 msgid "That email is not available."
 msgstr ""
 
-#: ckan/logic/validators.py:590
+#: ckan/logic/validators.py:601
 msgid "Please enter both passwords"
 msgstr ""
 
-#: ckan/logic/validators.py:598
+#: ckan/logic/validators.py:609
 msgid "Passwords must be strings"
 msgstr ""
 
-#: ckan/logic/validators.py:602
+#: ckan/logic/validators.py:613
 msgid "Your password must be 4 characters or longer"
 msgstr ""
 
-#: ckan/logic/validators.py:610
+#: ckan/logic/validators.py:621
 msgid "The passwords you entered do not match"
 msgstr ""
 
-#: ckan/logic/validators.py:631
+#: ckan/logic/validators.py:642
 msgid ""
 "Edit not allowed as it looks like spam. Please avoid links in your "
 "description."
 msgstr ""
 
-#: ckan/logic/validators.py:640
+#: ckan/logic/validators.py:651
 #, python-format
 msgid "Name must be at least %s characters long"
 msgstr ""
 
-#: ckan/logic/validators.py:648
+#: ckan/logic/validators.py:659
 msgid "That vocabulary name is already in use."
 msgstr ""
 
-#: ckan/logic/validators.py:654
+#: ckan/logic/validators.py:665
 #, python-format
 msgid "Cannot change value of key from %s to %s. This key is read-only"
 msgstr ""
 
-#: ckan/logic/validators.py:663
+#: ckan/logic/validators.py:674
 msgid "Tag vocabulary was not found."
 msgstr ""
 
-#: ckan/logic/validators.py:676
+#: ckan/logic/validators.py:687
 #, python-format
 msgid "Tag %s does not belong to vocabulary %s"
 msgstr ""
 
-#: ckan/logic/validators.py:682
+#: ckan/logic/validators.py:693
 msgid "No tag name"
 msgstr ""
 
-#: ckan/logic/validators.py:695
+#: ckan/logic/validators.py:706
 #, python-format
 msgid "Tag %s already belongs to vocabulary %s"
 msgstr ""
 
-#: ckan/logic/validators.py:718
+#: ckan/logic/validators.py:729
 msgid "Please provide a valid URL"
 msgstr ""
 
-#: ckan/logic/validators.py:732
+#: ckan/logic/validators.py:743
 msgid "role does not exist."
 msgstr ""
 
-#: ckan/logic/validators.py:761
+#: ckan/logic/validators.py:772
 msgid "Datasets with no organization can't be private."
 msgstr ""
 
-#: ckan/logic/validators.py:767
+#: ckan/logic/validators.py:778
 msgid "Not a list"
 msgstr ""
 
-#: ckan/logic/validators.py:770
+#: ckan/logic/validators.py:781
 msgid "Not a string"
 msgstr ""
 
-#: ckan/logic/validators.py:802
+#: ckan/logic/validators.py:813
 msgid "This parent would create a loop in the hierarchy"
 msgstr ""
 
-#: ckan/logic/validators.py:812
+#: ckan/logic/validators.py:823
 msgid "\"filter_fields\" and \"filter_values\" should have the same length"
 msgstr ""
 
-#: ckan/logic/validators.py:823
+#: ckan/logic/validators.py:834
 msgid "\"filter_fields\" is required when \"filter_values\" is filled"
 msgstr ""
 
-#: ckan/logic/validators.py:826
+#: ckan/logic/validators.py:837
 msgid "\"filter_values\" is required when \"filter_fields\" is filled"
 msgstr ""
 
-#: ckan/logic/validators.py:840
+#: ckan/logic/validators.py:851
 msgid "There is a schema field with the same name"
 msgstr ""
 
-#: ckan/logic/validators.py:866
+#: ckan/logic/validators.py:877
 msgid "Email {email} is not a valid format"
 msgstr ""
 
