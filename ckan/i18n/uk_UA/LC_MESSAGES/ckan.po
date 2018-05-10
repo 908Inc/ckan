@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.0b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-08 11:54+0000\n"
+"POT-Creation-Date: 2018-05-10 14:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kate Svetocheva <kate.svetocheva@linkdigital.com.au>, "
 "2017\n"
@@ -348,6 +348,7 @@ msgid "User %r not authorized to edit members of %s"
 msgstr "Користувач %r має недостатньо прав, щоб редагувати учасників %s"
 
 #: ckan/controllers/group.py:675 ckan/controllers/organization.py:65
+#, python-format
 msgid "Unauthorized to create group %s members"
 msgstr "У вас недостатньо прав, щоб видалити учасників групи %s"
 
@@ -2171,7 +2172,7 @@ msgstr "Шукати набір даних"
 #: ckan/templates/snippets/simple_search.html:5
 #: ckan/templates/user/snippets/user_search.html:6
 msgid "Search"
-msgstr "Пошук"
+msgstr "Шукати"
 
 #: ckan/templates/page.html:6
 msgid "Skip to content"
@@ -2926,7 +2927,7 @@ msgstr "наприклад, навколишнє середовище"
 
 #: ckan/templates/home/snippets/search.html:6
 msgid "Search data"
-msgstr "Шукати дані"
+msgstr "Пошук"
 
 #: ckan/templates/home/snippets/search.html:16
 msgid "Popular tags"
@@ -4067,7 +4068,7 @@ msgstr "Мої набори даних"
 #: ckan/templates/user/dashboard.html:21
 #: ckan/templates/user/dashboard_organizations.html:12
 msgid "My Organizations"
-msgstr "Мої реєстратори"
+msgstr "Мої розпорядники"
 
 #: ckan/templates/user/dashboard.html:22
 #: ckan/templates/user/dashboard_groups.html:12
@@ -4128,7 +4129,7 @@ msgstr "Змінити деталі"
 #: ckan/templates/user/request_reset.html:16
 #: ckan/templates/user/snippets/login_form.html:20
 msgid "Username"
-msgstr "Ім’я користувача"
+msgstr "Логін користувача"
 
 #: ckan/templates/user/edit_user_form.html:10
 msgid "Full name"
@@ -4195,7 +4196,7 @@ msgstr "Всі користувачі"
 #: ckan/templates/user/login.html:12
 #: ckan/templates/user/snippets/login_form.html:28
 msgid "Login"
-msgstr "Вхід"
+msgstr "Увійти"
 
 #: ckan/templates/user/login.html:25
 msgid "Need an Account?"
@@ -4272,7 +4273,7 @@ msgstr "Створюйте набори даних, групи та інші ц�
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
-msgstr "користувацьке ім’я"
+msgstr "логін користувача"
 
 #: ckan/templates/user/new_user_form.html:6
 msgid "Full Name"
@@ -4853,7 +4854,5 @@ msgstr ""
 #~ msgstr "Електронна адреса"
 
 #~ msgid ""
-#~ "Також, ви можете знайти цей реєстр, "
-#~ "перейшовши %(api_link)s (see %(api_doc_link)s). \n"
 #~ msgstr ""
 
