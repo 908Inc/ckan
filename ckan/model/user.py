@@ -51,6 +51,10 @@ class User(vdm.sqlalchemy.StatefulObjectMixin,
 
     @classmethod
     def by_email(cls, email):
+        return meta.Session.query(cls).filter_by(email=email).all()
+
+    @classmethod
+    def by_email_no_case(cls, email):
         return meta.Session.query(cls).filter(func.lower(email) == func.lower(email)).all()
 
     @classmethod
