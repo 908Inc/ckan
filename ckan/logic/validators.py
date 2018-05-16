@@ -576,7 +576,7 @@ def user_email_validator(key, data, errors, context):
 
     if not isinstance(new_user_email, basestring):
         raise Invalid(_('User emails must be strings'))
-    user = model.User.by_email_no_case(new_user_email)
+    user = model.User.by_email(new_user_email)
     if user:
         user = user[0] # by_email return list
         user_obj_from_context = context.get('user_obj')
