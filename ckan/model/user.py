@@ -25,7 +25,7 @@ user_table = Table('user', meta.metadata,
         Column('openid', types.UnicodeText),
         Column('password', types.UnicodeText),
         Column('fullname', types.UnicodeText),
-        Column('email', types.UnicodeText, unique=True),
+        Column('email', types.UnicodeText(collation='NOCASE'), unique=True),
         Column('apikey', types.UnicodeText, default=_types.make_uuid),
         Column('created', types.DateTime, default=datetime.datetime.now),
         Column('reset_key', types.UnicodeText),
@@ -51,7 +51,7 @@ class User(vdm.sqlalchemy.StatefulObjectMixin,
 
     @classmethod
     def by_email(cls, email):
-        return meta.Session.query(cls).filter_by(email=email).all()
+        return meta.Session.query(cls).filter(func.lower(email) == func.lower(email)).all()
 
     @classmethod
     def get(cls, user_reference):
