@@ -1960,7 +1960,7 @@ msgstr "Завантажити"
 #: ckan/templates/macros/form.html:235
 #: ckan/templates/snippets/search_form.html:68
 msgid "Remove"
-msgstr "Забрати"
+msgstr "Прибрати"
 
 #: ckan/public/base/javascript/modules/image-upload.js:80
 #: ckan/public/base/javascript/modules/image-upload.min.js:5
@@ -2790,7 +2790,7 @@ msgstr "Вигляд {name}"
 
 #: ckan/templates/group/snippets/group_item.html:43
 msgid "Remove dataset from this group"
-msgstr "Забрати набір даних з цієї групи"
+msgstr "Видалити набір даних з цієї групи"
 
 #: ckan/templates/group/snippets/helper.html:4
 msgid "What are Groups?"
