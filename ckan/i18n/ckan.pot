@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the ckan project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-10 14:26+0000\n"
+"POT-Creation-Date: 2018-05-25 13:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -226,9 +225,9 @@ msgstr ""
 #: ckan/controllers/group.py:512 ckan/controllers/group.py:545
 #: ckan/controllers/group.py:575 ckan/controllers/group.py:586
 #: ckan/controllers/group.py:640 ckan/controllers/group.py:658
-#: ckan/controllers/group.py:719 ckan/controllers/group.py:751
-#: ckan/controllers/group.py:784 ckan/controllers/group.py:841
-#: ckan/controllers/group.py:938 ckan/controllers/organization.py:111
+#: ckan/controllers/group.py:722 ckan/controllers/group.py:754
+#: ckan/controllers/group.py:787 ckan/controllers/group.py:844
+#: ckan/controllers/group.py:941 ckan/controllers/organization.py:113
 #: ckan/controllers/package.py:1246 ckan/controllers/package.py:1261
 #: ckan/logic/action/create.py:1398
 msgid "Group not found"
@@ -342,47 +341,55 @@ msgstr ""
 msgid "Unauthorized to create group %s members"
 msgstr ""
 
-#: ckan/controllers/group.py:717 ckan/controllers/organization.py:109
+#: ckan/controllers/group.py:702 ckan/controllers/organization.py:90
+msgid "New user was created and got permissions"
+msgstr ""
+
+#: ckan/controllers/group.py:704 ckan/controllers/organization.py:94
+msgid "Existing user got permissions"
+msgstr ""
+
+#: ckan/controllers/group.py:720 ckan/controllers/organization.py:111
 #, python-format
 msgid "Unauthorized to add member to group %s"
 msgstr ""
 
-#: ckan/controllers/group.py:736 ckan/controllers/group.py:749
+#: ckan/controllers/group.py:739 ckan/controllers/group.py:752
 #, python-format
 msgid "Unauthorized to delete group %s members"
 msgstr ""
 
-#: ckan/controllers/group.py:743
+#: ckan/controllers/group.py:746
 msgid "Group member has been deleted."
 msgstr ""
 
-#: ckan/controllers/group.py:767 ckan/controllers/package.py:417
+#: ckan/controllers/group.py:770 ckan/controllers/package.py:417
 msgid "Select two revisions before doing the comparison."
 msgstr ""
 
-#: ckan/controllers/group.py:791
+#: ckan/controllers/group.py:794
 msgid "CKAN Group Revision History"
 msgstr ""
 
-#: ckan/controllers/group.py:795
+#: ckan/controllers/group.py:798
 msgid "Recent changes to CKAN Group: "
 msgstr ""
 
-#: ckan/controllers/group.py:816 ckan/controllers/package.py:468
+#: ckan/controllers/group.py:819 ckan/controllers/package.py:468
 msgid "Log message: "
 msgstr ""
 
-#: ckan/controllers/group.py:866 ckan/controllers/package.py:1174
+#: ckan/controllers/group.py:869 ckan/controllers/package.py:1174
 #: ckan/controllers/user.py:713
 msgid "You are now following {0}"
 msgstr ""
 
-#: ckan/controllers/group.py:886 ckan/controllers/package.py:1193
+#: ckan/controllers/group.py:889 ckan/controllers/package.py:1193
 #: ckan/controllers/user.py:733
 msgid "You are no longer following {0}"
 msgstr ""
 
-#: ckan/controllers/group.py:906 ckan/controllers/user.py:578
+#: ckan/controllers/group.py:909 ckan/controllers/user.py:578
 #, python-format
 msgid "Unauthorized to view followers %s"
 msgstr ""
