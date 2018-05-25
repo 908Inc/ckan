@@ -94,7 +94,7 @@ class OrganizationController(group.GroupController):
                     del data_dict['email']
                 c.group_dict = self._action('group_member_create')(
                     context, data_dict)
-
+                h.flash_success('New user was created and got permissions')
                 self._redirect_to_this_controller(action='members', id=id)
             else:
                 user = request.params.get('user')
