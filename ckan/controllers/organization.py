@@ -87,11 +87,11 @@ class OrganizationController(group.GroupController):
                     user_dict = self._action('user_invite')(
                         context, user_data_dict)
                     data_dict['username'] = user_dict['name']
-                    msg = u'New user was created and got permissions'
+                    msg = _('New user was created and got permissions')
                 else:
                     # Old logic suggests that email isn't unique
                     data_dict['username'] = user_by_email[0].name
-                    msg = u'Existing user got permissions'
+                    msg = _('Existing user got permissions')
                 if 'email' in data_dict:
                     del data_dict['email']
                 c.group_dict = self._action('group_member_create')(
