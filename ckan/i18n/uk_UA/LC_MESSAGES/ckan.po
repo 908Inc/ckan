@@ -2573,7 +2573,7 @@ msgstr "Пошук груп..."
 #: ckan/templates/snippets/sort_by.html:15
 #: ckanext/example_idatasetform/templates/package/search.html:13
 msgid "Name Ascending"
-msgstr "Ім’я за зростанням"
+msgstr "Назвою (від А до Я)"
 
 #: ckan/templates/group/index.html:20 ckan/templates/group/read.html:17
 #: ckan/templates/organization/bulk_process.html:98
@@ -2585,7 +2585,7 @@ msgstr "Ім’я за зростанням"
 #: ckan/templates/snippets/sort_by.html:16
 #: ckanext/example_idatasetform/templates/package/search.html:14
 msgid "Name Descending"
-msgstr "Ім’я за спаданням"
+msgstr "Назвою (від Я до А)"
 
 #: ckan/templates/group/index.html:29
 msgid "There are currently no groups for this site"
@@ -2703,7 +2703,7 @@ msgstr "Створити групу"
 #: ckan/templates/snippets/sort_by.html:14
 #: ckanext/example_idatasetform/templates/package/search.html:12
 msgid "Relevance"
-msgstr "Релевантність"
+msgstr "Релевантністю"
 
 #: ckan/templates/group/read.html:18
 #: ckan/templates/organization/bulk_process.html:99
@@ -2713,7 +2713,7 @@ msgstr "Релевантність"
 #: ckan/templates/snippets/sort_by.html:17
 #: ckanext/example_idatasetform/templates/package/search.html:15
 msgid "Last Modified"
-msgstr "Востаннє внесені зміни"
+msgstr "Востаннє внесеними змінами"
 
 #: ckan/templates/group/read.html:19 ckan/templates/organization/read.html:23
 #: ckan/templates/package/search.html:33
