@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.0b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-28 15:26+0000\n"
+"POT-Creation-Date: 2018-05-28 20:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kate Svetocheva <kate.svetocheva@linkdigital.com.au>, "
 "2017\n"
@@ -2963,15 +2963,12 @@ msgid "Site logo"
 msgstr "Логотип сайту"
 
 #: ckan/templates/macros/form.html:126
-#, python-format
-msgid ""
-"You can use <a href=\"#markdown\" title=\"Markdown quick reference\" "
-"data-target=\"popover\" data-content=\"%(markdown_tooltip)s\" data-"
-"html=\"true\">Markdown formatting</a> here"
-msgstr ""
-"Ви можете використовувати <a href=\"#markdown\" title=\"Markdown quick "
-"reference\" data-target=\"popover\" data-content=\"%(markdown_tooltip)s\""
-" data-html=\"true\">розмітку даних Маркдаун</a> тут"
+msgid "You can use Markdown formatting here"
+msgstr "Ви можете використовувати розмітку даних Маркдаун тут"
+
+#: ckan/templates/macros/form.html:126
+msgid "Markdown quick reference"
+msgstr "Маркдаун. Швидка довідка"
 
 #: ckan/templates/macros/form.html:265
 msgid "This field is required"

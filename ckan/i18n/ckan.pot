@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-28 15:26+0000\n"
+"POT-Creation-Date: 2018-05-28 20:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2837,11 +2837,11 @@ msgid "Site logo"
 msgstr ""
 
 #: ckan/templates/macros/form.html:126
-#, python-format
-msgid ""
-"You can use <a href=\"#markdown\" title=\"Markdown quick reference\" data-"
-"target=\"popover\" data-content=\"%(markdown_tooltip)s\" data-"
-"html=\"true\">Markdown formatting</a> here"
+msgid "You can use Markdown formatting here"
+msgstr ""
+
+#: ckan/templates/macros/form.html:126
+msgid "Markdown quick reference"
 msgstr ""
 
 #: ckan/templates/macros/form.html:265
