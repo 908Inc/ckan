@@ -1,4 +1,4 @@
-{# 
+{#
 Displays a select box for ordering search results
 
 sort = The currently selected option
@@ -16,7 +16,7 @@ Example:
     <option value="title_string desc"{% if sort=='title_string desc' %} selected="selected"{% endif %}>{{ _('Name Descending') }}</option>
     <option value="metadata_modified desc"{% if sort=='metadata_modified desc' %} selected="selected"{% endif %}>{{ _('Last Modified') }}</option>
     {% if g.tracking_enabled %}
-      <option value="views_recent desc"{% if sort=='views_recent desc' %} selected="selected"{% endif %}>{{ _('Popular') }}</option>
+      <option value="views_recent desc"{% if sort=='views_recent desc' %} selected="selected"{% endif %}>{{ _('By popular') }}</option>
     {% endif %}
   </select>
   <button class="btn js-hide" type="submit">{{ _('Go') }}</button>

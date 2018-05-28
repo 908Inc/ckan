@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.0b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-25 13:10+0000\n"
+"POT-Creation-Date: 2018-05-28 15:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kate Svetocheva <kate.svetocheva@linkdigital.com.au>, "
 "2017\n"
@@ -2717,12 +2717,9 @@ msgstr "Востаннє внесені зміни"
 
 #: ckan/templates/group/read.html:19 ckan/templates/organization/read.html:23
 #: ckan/templates/package/search.html:33
-#: ckan/templates/snippets/package_item.html:50
-#: ckan/templates/snippets/popular.html:3
 #: ckan/templates/snippets/sort_by.html:19
-#: ckanext/example_idatasetform/templates/package/search.html:18
-msgid "Popular"
-msgstr "Популярне"
+msgid "By popular"
+msgstr "Популярністю"
 
 #: ckan/templates/group/read.html:21 ckan/templates/organization/read.html:25
 #: ckan/templates/snippets/search_form.html:3
@@ -3946,6 +3943,12 @@ msgstr "Цей набір даних задовольняє визначення
 #: ckan/templates/snippets/organization.html:48
 msgid "There is no description for this organization"
 msgstr "Немає жодного опису для цього розпорядника"
+
+#: ckan/templates/snippets/package_item.html:50
+#: ckan/templates/snippets/popular.html:3
+#: ckanext/example_idatasetform/templates/package/search.html:18
+msgid "Popular"
+msgstr "Популярне"
 
 #: ckan/templates/snippets/package_item.html:57
 msgid "This dataset has no description"
