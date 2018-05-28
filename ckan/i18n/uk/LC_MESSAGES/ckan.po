@@ -28,7 +28,7 @@ msgstr ""
 
 #: ckan/authz.py:194 ckan/templates/header.html:14
 msgid "Admin"
-msgstr "Адмін"
+msgstr ""
 
 #: ckan/authz.py:198
 msgid "Editor"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: ckan/controllers/admin.py:50
 msgid "Site Title"
-msgstr "Назва сайту"
+msgstr ""
 
 #: ckan/controllers/admin.py:51
 msgid "Style"
@@ -290,7 +290,7 @@ msgstr ""
 #: ckan/controllers/group.py:318 ckan/controllers/home.py:65
 #: ckan/controllers/package.py:244 ckan/lib/helpers.py:858
 msgid "Licenses"
-msgstr "Ліцензії"
+msgstr ""
 
 #: ckan/controllers/group.py:404 ckan/controllers/group.py:521
 #: ckan/controllers/package.py:326 ckan/controllers/package.py:557
@@ -350,11 +350,11 @@ msgstr ""
 
 #: ckan/controllers/group.py:702 ckan/controllers/organization.py:90
 msgid "New user was created and got permissions"
-msgstr "Новий користувач був створений та отримав права"
+msgstr ""
 
 #: ckan/controllers/group.py:704 ckan/controllers/organization.py:94
 msgid "Existing user got permissions"
-msgstr "Існуючий  користувач отримав права"
+msgstr ""
 
 #: ckan/controllers/group.py:720 ckan/controllers/organization.py:111
 #, python-format
@@ -433,7 +433,7 @@ msgstr ""
 #: ckan/controllers/package.py:1396 ckan/controllers/package.py:1431
 #: ckan/controllers/package.py:1538
 msgid "Dataset not found"
-msgstr "Набір даних не знайдено"
+msgstr ""
 
 #: ckan/controllers/package.py:358 ckan/controllers/package.py:360
 #: ckan/controllers/package.py:362
@@ -512,7 +512,7 @@ msgstr ""
 
 #: ckan/controllers/package.py:1016
 msgid "Dataset has been deleted."
-msgstr "Набір даних було видалено"
+msgstr ""
 
 #: ckan/controllers/package.py:1021 ckan/controllers/package.py:1039
 #, python-format
@@ -521,7 +521,7 @@ msgstr ""
 
 #: ckan/controllers/package.py:1044
 msgid "Resource has been deleted."
-msgstr "Ресурс успішно видалено"
+msgstr ""
 
 #: ckan/controllers/package.py:1055
 #, python-format
@@ -593,7 +593,7 @@ msgstr ""
 
 #: ckan/controllers/tag.py:60
 msgid "Other"
-msgstr "Інші"
+msgstr ""
 
 #: ckan/controllers/tag.py:74
 msgid "Tag not found"
@@ -1255,10 +1255,8 @@ msgid "User emails must be strings"
 msgstr ""
 
 #: ckan/logic/validators.py:592
-#, fuzzy
-#| msgid "That login name is not available."
 msgid "That email is not available."
-msgstr "Цей логін недоступний"
+msgstr ""
 
 #: ckan/logic/validators.py:601
 msgid "Please enter both passwords"
