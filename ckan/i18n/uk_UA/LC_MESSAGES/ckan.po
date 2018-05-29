@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.0b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-25 13:10+0000\n"
+"POT-Creation-Date: 2018-05-28 20:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kate Svetocheva <kate.svetocheva@linkdigital.com.au>, "
 "2017\n"
@@ -2573,7 +2573,7 @@ msgstr "Пошук груп..."
 #: ckan/templates/snippets/sort_by.html:15
 #: ckanext/example_idatasetform/templates/package/search.html:13
 msgid "Name Ascending"
-msgstr "Ім’я за зростанням"
+msgstr "Назвою (від А до Я)"
 
 #: ckan/templates/group/index.html:20 ckan/templates/group/read.html:17
 #: ckan/templates/organization/bulk_process.html:98
@@ -2585,7 +2585,7 @@ msgstr "Ім’я за зростанням"
 #: ckan/templates/snippets/sort_by.html:16
 #: ckanext/example_idatasetform/templates/package/search.html:14
 msgid "Name Descending"
-msgstr "Ім’я за спаданням"
+msgstr "Назвою (від Я до А)"
 
 #: ckan/templates/group/index.html:29
 msgid "There are currently no groups for this site"
@@ -2703,7 +2703,7 @@ msgstr "Створити групу"
 #: ckan/templates/snippets/sort_by.html:14
 #: ckanext/example_idatasetform/templates/package/search.html:12
 msgid "Relevance"
-msgstr "Релевантність"
+msgstr "Релевантністю"
 
 #: ckan/templates/group/read.html:18
 #: ckan/templates/organization/bulk_process.html:99
@@ -2713,16 +2713,13 @@ msgstr "Релевантність"
 #: ckan/templates/snippets/sort_by.html:17
 #: ckanext/example_idatasetform/templates/package/search.html:15
 msgid "Last Modified"
-msgstr "Востаннє внесені зміни"
+msgstr "Востаннє внесеними змінами"
 
 #: ckan/templates/group/read.html:19 ckan/templates/organization/read.html:23
 #: ckan/templates/package/search.html:33
-#: ckan/templates/snippets/package_item.html:50
-#: ckan/templates/snippets/popular.html:3
 #: ckan/templates/snippets/sort_by.html:19
-#: ckanext/example_idatasetform/templates/package/search.html:18
-msgid "Popular"
-msgstr "Популярне"
+msgid "By popular"
+msgstr "Популярністю"
 
 #: ckan/templates/group/read.html:21 ckan/templates/organization/read.html:25
 #: ckan/templates/snippets/search_form.html:3
@@ -2966,15 +2963,12 @@ msgid "Site logo"
 msgstr "Логотип сайту"
 
 #: ckan/templates/macros/form.html:126
-#, python-format
-msgid ""
-"You can use <a href=\"#markdown\" title=\"Markdown quick reference\" "
-"data-target=\"popover\" data-content=\"%(markdown_tooltip)s\" data-"
-"html=\"true\">Markdown formatting</a> here"
-msgstr ""
-"Ви можете використовувати <a href=\"#markdown\" title=\"Markdown quick "
-"reference\" data-target=\"popover\" data-content=\"%(markdown_tooltip)s\""
-" data-html=\"true\">розмітку даних Маркдаун</a> тут"
+msgid "You can use Markdown formatting here"
+msgstr "Ви можете використовувати розмітку даних Маркдаун тут"
+
+#: ckan/templates/macros/form.html:126
+msgid "Markdown quick reference"
+msgstr "Маркдаун. Швидка довідка"
 
 #: ckan/templates/macros/form.html:265
 msgid "This field is required"
@@ -3946,6 +3940,12 @@ msgstr "Цей набір даних задовольняє визначення
 #: ckan/templates/snippets/organization.html:48
 msgid "There is no description for this organization"
 msgstr "Немає жодного опису для цього розпорядника"
+
+#: ckan/templates/snippets/package_item.html:50
+#: ckan/templates/snippets/popular.html:3
+#: ckanext/example_idatasetform/templates/package/search.html:18
+msgid "Popular"
+msgstr "Популярне"
 
 #: ckan/templates/snippets/package_item.html:57
 msgid "This dataset has no description"
