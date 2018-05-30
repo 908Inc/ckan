@@ -111,6 +111,6 @@ class OrganizationController(group.GroupController):
             abort(403, _('Unauthorized to add member to group %s') % '')
         except NotFound:
             abort(404, _('Group not found'))
-        except ValidationError, e:
-            h.flash_error(e.error_summary)
+        except ValidationError:
+            h.flash_error(_('You must specify a valid email address'))
         return self._render_template('group/member_new.html', group_type)

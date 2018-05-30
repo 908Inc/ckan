@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.0b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-28 20:41+0000\n"
+"POT-Creation-Date: 2018-05-30 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kate Svetocheva <kate.svetocheva@linkdigital.com.au>, "
 "2017\n"
@@ -365,6 +365,10 @@ msgstr "Існуючий  користувач отримав права"
 msgid "Unauthorized to add member to group %s"
 msgstr "У вас недостатньо прав, щоб додати учасника до групи %s"
 
+#: ckan/controllers/group.py:724
+msgid "You must select an existing user or specify a valid email address"
+msgstr "Вам слід вибрати існуючого користувача або вказати валідний електронний адресу"
+
 #: ckan/controllers/group.py:739 ckan/controllers/group.py:752
 #, python-format
 msgid "Unauthorized to delete group %s members"
@@ -420,6 +424,10 @@ msgstr ""
 #, python-format
 msgid "%s uses your email address if you need to reset your password."
 msgstr "%s, використайте вашу електронну адресу для відновлення паролю."
+
+#: ckan/controllers/organization.py:115
+msgid "You must specify a valid email address"
+msgstr "Вам слід вказати валідний електронний адресу"
 
 #: ckan/controllers/package.py:288
 msgid "Invalid search query: {error_message}"
