@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-28 20:41+0000\n"
+"POT-Creation-Date: 2018-05-30 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -354,6 +354,10 @@ msgstr ""
 msgid "Unauthorized to add member to group %s"
 msgstr ""
 
+#: ckan/controllers/group.py:724
+msgid "You must select an existing user or specify a valid email address"
+msgstr ""
+
 #: ckan/controllers/group.py:739 ckan/controllers/group.py:752
 #, python-format
 msgid "Unauthorized to delete group %s members"
@@ -406,6 +410,10 @@ msgstr ""
 #: ckan/controllers/home.py:75
 #, python-format
 msgid "%s uses your email address if you need to reset your password."
+msgstr ""
+
+#: ckan/controllers/organization.py:115
+msgid "You must specify a valid email address"
 msgstr ""
 
 #: ckan/controllers/package.py:288
