@@ -3220,9 +3220,8 @@ msgid ""
 "together with a description and other information, at a fixed URL. "
 "Datasets are what users see when searching for data. "
 msgstr ""
-" Набір даних - це вся колекція ресурсних даних (таких, як файли)з описами"
-" та иншою інформацією за фіксованим посиланням. Набори даних - це те, що "
-"бачуть користувачі, коли шукають дані. "
+"Набір даних - сукупність однорідних значень (записів) даних та метаданих, "
+"що їх описують "
 
 #: ckan/templates/package/confirm_delete.html:12
 msgid "Are you sure you want to delete dataset - {name}?"
@@ -3680,7 +3679,7 @@ msgstr ""
 
 #: ckan/templates/package/snippets/resource_form.html:28
 msgid "eg. January 2011 Gold Prices"
-msgstr "наприклад, січень 2011 золоті ціни"
+msgstr "Назва файлу, наприклад Reestr.csv"
 
 #: ckan/templates/package/snippets/resource_form.html:32
 msgid "Some useful notes about the data"
@@ -4866,9 +4865,8 @@ msgstr ""
 "наприклад, http://example.com (якщо пусто, використовується посилання на "
 "ресурс)"
 
-#~ msgid "Email address"
-#~ msgstr "Електронна адреса"
 
-#~ msgid ""
-#~ msgstr ""
+# Need for validation for new user
+msgid "Password1"
+msgstr "Пароль"
 
