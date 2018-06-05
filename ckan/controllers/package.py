@@ -256,6 +256,10 @@ class PackageController(base.BaseController):
 
             c.facet_titles = facets
 
+            total_pages = int((len(fq) - 1) / limit) + 1
+            if not 1 < page <= total_pages:
+                page = 1
+
             data_dict = {
                 'q': q,
                 'fq': fq.strip(),
