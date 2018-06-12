@@ -721,7 +721,9 @@ class GroupController(base.BaseController):
         except NotFound:
             abort(404, _('Group not found'))
         except ValidationError:
-            h.flash_error(_('You must select an existing user or specify a valid email address'))
+            msg = _('You must select an existing user '
+                    'or specify a valid email address')
+            h.flash_error(msg)
         return self._render_template('group/member_new.html', group_type)
 
     def member_delete(self, id):
