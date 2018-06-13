@@ -1,8 +1,8 @@
 {% trans %}Dear{% endtrans %} {{ user_name }},
 
-{% trans %}You have been invited to{% endtrans %}{{ site_title }}.
+{% trans %}You have been invited to{% endtrans %} {{ site_title }}.
 
-{% trans %}A user has already been created for you with the username{% endtrans %} {{ user_name }}. {% trans %}You can change it later.{% endtrans %}
+{% trans %}A user has already been created for you with the username {% endtrans %} {{ user_name }}. {% trans %}You can change it later.{% endtrans %}
 
 {% trans %}You have been added to the{% endtrans %} {{ group_type }} {{ group_title }} {% trans %}with the following role:{% endtrans %} {{ role_name }}.
 
