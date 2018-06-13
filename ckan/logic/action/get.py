@@ -362,9 +362,12 @@ def _group_or_org_list(context, data_dict, is_org=False):
     if sort_info and sort_info[0][0] == 'package_count':
         query = model.Session.query(model.Group.id,
                                     model.Group.name,
-                                    sqlalchemy.func.count(model.Group.id)) \
-            .outerjoin(model.Member, model.Group.id == model.Member.group_id) \
-            .outerjoin(model.Package, model.Member.table_id == model.Package.id)
+                                    sqlalchemy.func.count(model.Group.id))
+
+        query = query.filter(model.Member.group_id == model.Group.id) \
+                     .filter(model.Member.table_id == model.Package.id) \
+                     .filter(model.Member.table_name == 'package') \
+                     .filter(model.Package.state == 'active')
     else:
         query = model.Session.query(model.Group.id,
                                     model.Group.name)
@@ -374,14 +377,12 @@ def _group_or_org_list(context, data_dict, is_org=False):
     if groups:
         query = query.filter(model.Group.name.in_(groups))
     if q:
-        query_words_list = q.split()
-        for el in query_words_list:
-            q = u'%{0}%'.format(el)
-            query = query.filter(_or_(
-                model.Group.name.ilike(q),
-                model.Group.title.ilike(q),
-                # model.Group.description.ilike(q),
-            ))
+        q = u'%{0}%'.format(q)
+        query = query.filter(_or_(
+            model.Group.name.ilike(q),
+            model.Group.title.ilike(q),
+            model.Group.description.ilike(q),
+        ))
 
     query = query.filter(model.Group.is_organization == is_org)
     query = query.filter(model.Group.type == group_type)
