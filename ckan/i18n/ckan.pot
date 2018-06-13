@@ -3,18 +3,661 @@
 # This file is distributed under the same license as the ckan project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-30 08:46+0000\n"
+"POT-Creation-Date: 2018-06-13 08:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ckanext/datapusher/helpers.py:21
+msgid "Complete"
+msgstr ""
+
+#: ckanext/datapusher/helpers.py:22
+msgid "Pending"
+msgstr ""
+
+#: ckanext/datapusher/helpers.py:23
+msgid "Submitting"
+msgstr ""
+
+#: ckan/controllers/package.py:662 ckanext/datapusher/helpers.py:24
+msgid "Error"
+msgstr ""
+
+#: ckanext/datapusher/helpers.py:29
+msgid "Not Uploaded Yet"
+msgstr ""
+
+#: ckan/controllers/package.py:594 ckan/controllers/package.py:1057
+#: ckan/controllers/package.py:1077 ckan/controllers/package.py:1144
+#: ckan/controllers/package.py:1327 ckan/controllers/package.py:1405
+#: ckan/controllers/package.py:1436 ckan/controllers/package.py:1544
+#: ckan/controllers/package.py:1595 ckanext/datapusher/plugin.py:59
+#: ckanext/datastore/controller.py:80 ckanext/resourceproxy/controller.py:33
+msgid "Resource not found"
+msgstr ""
+
+#: ckan/controllers/api.py:64 ckan/controllers/group.py:165
+#: ckan/controllers/home.py:27 ckan/controllers/package.py:143
+#: ckan/controllers/revision.py:33 ckan/controllers/tag.py:27
+#: ckan/controllers/user.py:57 ckan/controllers/user.py:82
+#: ckan/controllers/user.py:85 ckan/controllers/user.py:116
+#: ckan/controllers/user.py:592 ckanext/datapusher/plugin.py:68
+msgid "Not authorized to see this page"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:12
+msgid "Upload to DataStore"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:19
+msgid "Upload error:"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:25
+#: ckanext/datapusher/templates/datapusher/resource_data.html:27
+msgid "Error:"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:36
+msgid "Error traceback:"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:48
+msgid "Status"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:52
+msgid "Last updated"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:56
+msgid "Never"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:62
+msgid "Upload Log"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:76
+msgid "Details"
+msgstr ""
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:83
+msgid "End of log"
+msgstr ""
+
+#: ckanext/datapusher/templates/package/resource_edit_base.html:5
+msgid "DataStore"
+msgstr ""
+
+#: ckanext/datastore/controller.py:53
+#, python-format
+msgid "format: must be one of %s"
+msgstr ""
+
+#: ckanext/datastore/controller.py:65
+msgid "DataStore resource not found"
+msgstr ""
+
+#: ckanext/datastore/backend/postgres.py:1059
+msgid ""
+"The data was invalid (for example: a numeric value is out of range or was "
+"inserted into a text field)."
+msgstr ""
+
+#: ckanext/datastore/logic/action.py:262 ckanext/datastore/logic/action.py:290
+#: ckanext/datastore/logic/action.py:348 ckanext/datastore/logic/action.py:459
+#: ckanext/datastore/logic/action.py:534 ckanext/datastore/logic/action.py:559
+msgid "Resource \"{0}\" was not found."
+msgstr ""
+
+#: ckanext/datastore/logic/auth.py:19
+msgid "User {0} not authorized to update resource {1}"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:19
+msgid "CKAN Data API"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:23
+msgid "Access resource data via a web API with powerful query support"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:24
+msgid ""
+" Further information in the <a       "
+"href=\"http://docs.ckan.org/en/latest/maintaining/datastore.html\" "
+"target=\"_blank\">main CKAN Data API and DataStore documentation</a>.</p> "
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:33
+msgid "Endpoints"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:37
+msgid "The Data API can be accessed via the following actions of the CKAN action API."
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:42
+msgid "Create"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:46
+msgid "Update / Insert"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:50
+msgid "Query"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:54
+msgid "Query (via SQL)"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:66
+msgid "Querying"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:70
+msgid "Query example (first 5 results)"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:75
+msgid "Query example (results containing 'jones')"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:80
+msgid "Query example (via SQL statement)"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:91
+msgid "Example: Javascript"
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:95
+msgid "A simple ajax (JSONP) request to the data API using jQuery."
+msgstr ""
+
+#: ckanext/datastore/templates/ajax_snippets/api_info.html:116
+msgid "Example: Python"
+msgstr ""
+
+#: ckanext/datastore/templates/datastore/dictionary.html:16
+msgid "Field {num}."
+msgstr ""
+
+#: ckanext/datastore/templates/datastore/dictionary.html:18
+msgid "Type Override"
+msgstr ""
+
+#: ckanext/datastore/templates/datastore/dictionary.html:25
+#: ckanext/datastore/templates/package/resource_read.html:20
+#: ckanext/datatablesview/templates/datatables/datatables_form.html:18
+msgid "Label"
+msgstr ""
+
+#: ckan/templates/group/snippets/group_form.html:20
+#: ckan/templates/organization/snippets/organization_form.html:20
+#: ckan/templates/package/snippets/package_basic_fields.html:19
+#: ckan/templates/package/snippets/resource_form.html:32
+#: ckan/templates/package/snippets/view_form.html:9
+#: ckanext/datastore/templates/datastore/dictionary.html:28
+#: ckanext/datastore/templates/package/resource_read.html:21
+msgid "Description"
+msgstr ""
+
+#: ckan/templates/group/member_new.html:60
+#: ckanext/datastore/templates/datastore/dictionary.html:33
+msgid "Save"
+msgstr ""
+
+#: ckanext/datastore/templates/package/resource_edit_base.html:6
+#: ckanext/datastore/templates/package/resource_read.html:14
+msgid "Data Dictionary"
+msgstr ""
+
+#: ckanext/datastore/templates/package/resource_read.html:18
+#: ckanext/datatablesview/templates/datatables/datatables_form.html:17
+msgid "Column"
+msgstr ""
+
+#: ckanext/datastore/templates/package/resource_read.html:19
+msgid "Type"
+msgstr ""
+
+#: ckan/public/base/javascript/modules/activity-stream.js:97
+#: ckan/public/base/javascript/modules/activity-stream.min.js:2
+#: ckan/public/base/javascript/modules/popover-context.js:62
+#: ckan/public/base/javascript/modules/popover-context.min.js:2
+#: ckan/templates/tests/mock_json_resource_preview_template.html:7
+#: ckan/templates/tests/mock_resource_preview_template.html:7
+#: ckanext/datastore/templates/package/snippets/data_api_button.html:7
+#: ckanext/example_theme_docs/v18_snippet_api/fanstatic/example_theme_popover.js:21
+#: ckanext/example_theme_docs/v18_snippet_api/fanstatic/example_theme_popover.min.js:1
+#: ckanext/example_theme_docs/v19_01_error/fanstatic/example_theme_popover.js:21
+#: ckanext/example_theme_docs/v19_01_error/fanstatic/example_theme_popover.min.js:1
+#: ckanext/example_theme_docs/v19_02_error_handling/fanstatic/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v19_02_error_handling/fanstatic/example_theme_popover.min.js:1
+#: ckanext/example_theme_docs/v20_pubsub/fanstatic/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v20_pubsub/fanstatic/example_theme_popover.min.js:1
+#: ckanext/example_theme_docs/v21_custom_jquery_plugin/fanstatic/example_theme_popover.js:8
+#: ckanext/example_theme_docs/v21_custom_jquery_plugin/fanstatic/example_theme_popover.min.js:1
+#: ckanext/reclineview/theme/templates/recline_view.html:14
+#: ckanext/textview/theme/templates/text_view.html:9
+msgid "Loading..."
+msgstr ""
+
+#: ckanext/datastore/templates/package/snippets/data_api_button.html:9
+msgid "Data API"
+msgstr ""
+
+#: ckanext/datatablesview/plugin.py:47 ckanext/reclineview/plugin.py:128
+msgid "Table"
+msgstr ""
+
+#: ckanext/datatablesview/templates/datatables/datatables_form.html:6
+msgid "Responsive display"
+msgstr ""
+
+#: ckanext/datatablesview/templates/datatables/datatables_form.html:12
+msgid "Show Columns"
+msgstr ""
+
+#: ckanext/datatablesview/templates/datatables/datatables_view.html:28
+msgid "Hide/Unhide Columns"
+msgstr ""
+
+#: ckanext/example_iconfigurer/templates/admin/config.html:11
+msgid "Datasets per page"
+msgstr ""
+
+#: ckanext/example_iconfigurer/templates/admin/config.html:13
+msgid "Test conf"
+msgstr ""
+
+#: ckan/templates/group/read.html:15 ckan/templates/organization/read.html:19
+#: ckan/templates/package/search.html:29 ckan/templates/snippets/sort_by.html:14
+#: ckanext/example_idatasetform/templates/package/search.html:12
+msgid "Relevance"
+msgstr ""
+
+#: ckan/templates/group/index.html:20 ckan/templates/group/read.html:16
+#: ckan/templates/organization/bulk_process.html:97
+#: ckan/templates/organization/index.html:20
+#: ckan/templates/organization/read.html:20 ckan/templates/package/search.html:30
+#: ckan/templates/snippets/search_form.html:4
+#: ckan/templates/snippets/simple_search.html:10
+#: ckan/templates/snippets/sort_by.html:15
+#: ckanext/example_idatasetform/templates/package/search.html:13
+msgid "Name Ascending"
+msgstr ""
+
+#: ckan/templates/group/index.html:20 ckan/templates/group/read.html:17
+#: ckan/templates/organization/bulk_process.html:98
+#: ckan/templates/organization/index.html:20
+#: ckan/templates/organization/read.html:21 ckan/templates/package/search.html:31
+#: ckan/templates/snippets/search_form.html:4
+#: ckan/templates/snippets/simple_search.html:10
+#: ckan/templates/snippets/sort_by.html:16
+#: ckanext/example_idatasetform/templates/package/search.html:14
+msgid "Name Descending"
+msgstr ""
+
+#: ckan/templates/group/read.html:18
+#: ckan/templates/organization/bulk_process.html:99
+#: ckan/templates/organization/read.html:22 ckan/templates/package/search.html:32
+#: ckan/templates/package/snippets/resource_form.html:51
+#: ckan/templates/snippets/sort_by.html:17
+#: ckanext/example_idatasetform/templates/package/search.html:15
+msgid "Last Modified"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/search.html:16
+msgid "Custom Field Ascending"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/search.html:17
+msgid "Custom Field Descending"
+msgstr ""
+
+#: ckan/templates/snippets/package_item.html:50
+#: ckan/templates/snippets/popular.html:3
+#: ckanext/example_idatasetform/templates/package/search.html:18
+msgid "Popular"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/snippets/additional_info.html:6
+#: ckanext/example_idatasetform/templates/package/snippets/package_basic_fields.html:4
+#: ckanext/example_idatasetform/templates/package/snippets/resource_form.html:6
+msgid "Custom Text"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/snippets/package_basic_fields.html:4
+msgid "custom text"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/snippets/package_metadata_fields.html:11
+msgid "Country Code"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/snippets/resource_form.html:6
+msgid "custom resource text"
+msgstr ""
+
+#: ckanext/example_itranslation/templates/home/index.html:4
+msgid "This is an untranslated string"
+msgstr ""
+
+#: ckanext/example_theme_docs/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:20
+#: ckanext/example_theme_docs/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:19
+msgid "This group has no description"
+msgstr ""
+
+#: ckan/templates/group/snippets/group_item.html:32
+#: ckan/templates/organization/snippets/organization_item.html:31
+#: ckanext/example_theme_docs/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:23
+#: ckanext/example_theme_docs/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:22
+msgid "{num} Dataset"
+msgid_plural "{num} Datasets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckan/templates/group/snippets/group_item.html:34
+#: ckan/templates/organization/snippets/organization_item.html:33
+#: ckanext/example_theme_docs/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:25
+#: ckanext/example_theme_docs/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:24
+msgid "0 Datasets"
+msgstr ""
+
+#: ckanext/example_theme_docs/v12_extra_public_dir/templates/home/snippets/promoted.html:4
+msgid "CKAN's data previewing tool has many powerful features"
+msgstr ""
+
+#: ckan/templates/group/followers.html:3 ckan/templates/group/followers.html:6
+#: ckan/templates/group/snippets/info.html:32
+#: ckan/templates/package/followers.html:3 ckan/templates/package/followers.html:6
+#: ckan/templates/package/snippets/info.html:23
+#: ckan/templates/snippets/context/group.html:13
+#: ckan/templates/snippets/context/user.html:15
+#: ckan/templates/snippets/organization.html:55
+#: ckan/templates/user/followers.html:3 ckan/templates/user/followers.html:7
+#: ckan/templates/user/read_base.html:49
+#: ckanext/example_theme_docs/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:12
+msgid "Followers"
+msgstr ""
+
+#: ckan/logic/__init__.py:99 ckan/logic/action/__init__.py:60
+#: ckan/templates/package/edit_base.html:21 ckan/templates/package/resources.html:5
+#: ckan/templates/package/snippets/package_context.html:12
+#: ckan/templates/package/snippets/resources.html:20
+#: ckan/templates/snippets/context/dataset.html:13
+#: ckanext/example_theme_docs/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:15
+msgid "Resources"
+msgstr ""
+
+#: ckan/public/base/javascript/modules/image-upload.js:80
+#: ckan/public/base/javascript/modules/image-upload.min.js:5
+#: ckan/templates/macros/form.html:412 ckanext/imageview/plugin.py:26
+#: ckanext/imageview/plugin.py:31
+msgid "Image"
+msgstr ""
+
+#: ckanext/imageview/theme/templates/image_form.html:3
+msgid "Image url"
+msgstr ""
+
+#: ckanext/imageview/theme/templates/image_form.html:3
+msgid "eg. http://example.com/image.jpg (if blank uses resource url)"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:101
+msgid "Data Explorer"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:171
+#: ckanext/reclineview/theme/public/recline_view.js:200
+#: ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Graph"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:231
+#: ckanext/reclineview/theme/public/recline_view.js:207
+#: ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Map"
+msgstr ""
+
+#: ckanext/reclineview/theme/public/recline_view.js:28
+#: ckanext/reclineview/theme/public/recline_view.min.js:1
+msgid "error loading view"
+msgstr ""
+
+#: ckanext/reclineview/theme/public/recline_view.js:75
+#: ckanext/reclineview/theme/public/recline_view.min.js:5
+msgid "Could not load view"
+msgstr ""
+
+#: ckanext/reclineview/theme/public/recline_view.js:77
+#: ckanext/reclineview/theme/public/recline_view.min.js:5
+msgid "DataStore returned an error"
+msgstr ""
+
+#: ckanext/reclineview/theme/public/recline_view.js:79
+#: ckanext/reclineview/theme/public/recline_view.min.js:5
+msgid "DataProxy returned an error"
+msgstr ""
+
+#: ckanext/reclineview/theme/public/recline_view.js:193
+#: ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Grid"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_form_filters.html:46
+#: ckanext/reclineview/theme/public/recline_view.js:215
+#: ckanext/reclineview/theme/public/recline_view.min.js:14
+msgid "Filters"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:3
+#: ckanext/reclineview/theme/templates/recline_map_form.html:3
+msgid "Row offset"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:3
+#: ckanext/reclineview/theme/templates/recline_map_form.html:3
+msgid "eg: 0"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:4
+#: ckanext/reclineview/theme/templates/recline_map_form.html:4
+msgid "Number of rows"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:4
+#: ckanext/reclineview/theme/templates/recline_map_form.html:4
+msgid "eg: 100"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:6
+msgid "Graph type"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:7
+msgid "Group (Axis 1)"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:8
+msgid "Series (Axis 2)"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:6
+msgid "Field type"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:7
+msgid "Latitude field"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:8
+msgid "Longitude field"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:9
+msgid "GeoJSON field"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:10
+msgid "Auto zoom to features"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:11
+msgid "Cluster markers"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:10
+msgid "Total number of Datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:17
+#: ckanext/stats/templates/ckanext/stats/index.html:40
+msgid "Date"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:18
+msgid "Total datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:33
+#: ckanext/stats/templates/ckanext/stats/index.html:179
+msgid "Dataset Revisions per Week"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:41
+msgid "All dataset revisions"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:42
+msgid "New datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:58
+#: ckanext/stats/templates/ckanext/stats/index.html:180
+msgid "Top Rated Datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:64
+msgid "Average rating"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:65
+msgid "Number of ratings"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:79
+msgid "No ratings"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:84
+#: ckanext/stats/templates/ckanext/stats/index.html:181
+msgid "Most Edited Datasets"
+msgstr ""
+
+#: ckan/logic/converters.py:146 ckan/logic/validators.py:149
+#: ckan/logic/validators.py:191 ckan/templates/package/read_base.html:19
+#: ckanext/stats/templates/ckanext/stats/index.html:89
+msgid "Dataset"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:90
+msgid "Number of edits"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:103
+msgid "No edited datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:108
+#: ckanext/stats/templates/ckanext/stats/index.html:182
+msgid "Largest Groups"
+msgstr ""
+
+#: ckan/logic/converters.py:171 ckan/logic/validators.py:244
+#: ckanext/stats/templates/ckanext/stats/index.html:113
+msgid "Group"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:114
+msgid "Number of datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:127
+msgid "No groups"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:132
+#: ckanext/stats/templates/ckanext/stats/index.html:183
+msgid "Top Tags"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:136
+msgid "Tag Name"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:137
+#: ckanext/stats/templates/ckanext/stats/index.html:157
+msgid "Number of Datasets"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:152
+#: ckanext/stats/templates/ckanext/stats/index.html:184
+msgid "Users Creating Most Datasets"
+msgstr ""
+
+#: ckan/logic/converters.py:121 ckan/logic/validators.py:214
+#: ckan/logic/validators.py:231 ckan/logic/validators.py:737
+#: ckan/templates/group/members.html:14 ckan/templates/organization/members.html:19
+#: ckanext/stats/templates/ckanext/stats/index.html:156
+msgid "User"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:175
+msgid "Statistics Menu"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:178
+msgid "Total Number of Datasets"
+msgstr ""
+
+#: ckanext/textview/plugin.py:67 ckanext/textview/plugin.py:69
+msgid "Text"
+msgstr ""
+
+#: ckanext/webpageview/plugin.py:21 ckanext/webpageview/plugin.py:26
+msgid "Website"
+msgstr ""
+
+#: ckanext/webpageview/theme/templates/webpage_form.html:3
+msgid "Web Page url"
+msgstr ""
+
+#: ckanext/webpageview/theme/templates/webpage_form.html:3
+msgid "eg. http://example.com (if blank uses resource url)"
+msgstr ""
+
+#: ckan/templates/dataviewer/snippets/data_preview.html:23
+#: ckan/templates/package/snippets/resource_view.html:56
+#: ckanext/webpageview/theme/templates/webpage_view.html:2
+msgid "Your browser does not support iframes."
+msgstr ""
 
 #: ckan/authz.py:182
 #, python-format
@@ -104,15 +747,6 @@ msgstr ""
 
 #: ckan/controllers/admin.py:187
 msgid "Action not implemented."
-msgstr ""
-
-#: ckan/controllers/api.py:64 ckan/controllers/group.py:165
-#: ckan/controllers/home.py:27 ckan/controllers/package.py:143
-#: ckan/controllers/revision.py:33 ckan/controllers/tag.py:27
-#: ckan/controllers/user.py:57 ckan/controllers/user.py:82
-#: ckan/controllers/user.py:85 ckan/controllers/user.py:116
-#: ckan/controllers/user.py:592 ckanext/datapusher/plugin.py:68
-msgid "Not authorized to see this page"
 msgstr ""
 
 #: ckan/controllers/api.py:124 ckan/controllers/api.py:221
@@ -225,15 +859,15 @@ msgstr ""
 #: ckan/controllers/group.py:512 ckan/controllers/group.py:545
 #: ckan/controllers/group.py:575 ckan/controllers/group.py:586
 #: ckan/controllers/group.py:640 ckan/controllers/group.py:658
-#: ckan/controllers/group.py:722 ckan/controllers/group.py:754
-#: ckan/controllers/group.py:787 ckan/controllers/group.py:844
-#: ckan/controllers/group.py:941 ckan/controllers/organization.py:113
+#: ckan/controllers/group.py:722 ckan/controllers/group.py:756
+#: ckan/controllers/group.py:789 ckan/controllers/group.py:846
+#: ckan/controllers/group.py:943 ckan/controllers/organization.py:113
 #: ckan/controllers/package.py:1246 ckan/controllers/package.py:1261
-#: ckan/logic/action/create.py:1398
+#: ckan/logic/action/create.py:1399
 msgid "Group not found"
 msgstr ""
 
-#: ckan/controllers/feed.py:244 ckan/logic/action/create.py:1398
+#: ckan/controllers/feed.py:244 ckan/logic/action/create.py:1399
 msgid "Organization not found"
 msgstr ""
 
@@ -268,7 +902,7 @@ msgstr ""
 
 #: ckan/controllers/group.py:316 ckan/controllers/home.py:63
 #: ckan/controllers/package.py:242 ckan/lib/helpers.py:856
-#: ckan/logic/__init__.py:109
+#: ckan/logic/__init__.py:110
 #: ckan/templates/package/snippets/package_basic_fields.html:24
 #: ckan/templates/snippets/context/dataset.html:17 ckan/templates/tag/index.html:3
 #: ckan/templates/tag/index.html:6 ckan/templates/tag/index.html:12
@@ -358,42 +992,42 @@ msgstr ""
 msgid "You must select an existing user or specify a valid email address"
 msgstr ""
 
-#: ckan/controllers/group.py:739 ckan/controllers/group.py:752
+#: ckan/controllers/group.py:741 ckan/controllers/group.py:754
 #, python-format
 msgid "Unauthorized to delete group %s members"
 msgstr ""
 
-#: ckan/controllers/group.py:746
+#: ckan/controllers/group.py:748
 msgid "Group member has been deleted."
 msgstr ""
 
-#: ckan/controllers/group.py:770 ckan/controllers/package.py:417
+#: ckan/controllers/group.py:772 ckan/controllers/package.py:417
 msgid "Select two revisions before doing the comparison."
 msgstr ""
 
-#: ckan/controllers/group.py:794
+#: ckan/controllers/group.py:796
 msgid "CKAN Group Revision History"
 msgstr ""
 
-#: ckan/controllers/group.py:798
+#: ckan/controllers/group.py:800
 msgid "Recent changes to CKAN Group: "
 msgstr ""
 
-#: ckan/controllers/group.py:819 ckan/controllers/package.py:468
+#: ckan/controllers/group.py:821 ckan/controllers/package.py:468
 msgid "Log message: "
 msgstr ""
 
-#: ckan/controllers/group.py:869 ckan/controllers/package.py:1174
+#: ckan/controllers/group.py:871 ckan/controllers/package.py:1174
 #: ckan/controllers/user.py:713
 msgid "You are now following {0}"
 msgstr ""
 
-#: ckan/controllers/group.py:889 ckan/controllers/package.py:1193
+#: ckan/controllers/group.py:891 ckan/controllers/package.py:1193
 #: ckan/controllers/user.py:733
 msgid "You are no longer following {0}"
 msgstr ""
 
-#: ckan/controllers/group.py:909 ckan/controllers/user.py:578
+#: ckan/controllers/group.py:911 ckan/controllers/user.py:578
 #, python-format
 msgid "Unauthorized to view followers %s"
 msgstr ""
@@ -469,15 +1103,6 @@ msgstr ""
 msgid "Unauthorized to edit this resource"
 msgstr ""
 
-#: ckan/controllers/package.py:594 ckan/controllers/package.py:1057
-#: ckan/controllers/package.py:1077 ckan/controllers/package.py:1144
-#: ckan/controllers/package.py:1327 ckan/controllers/package.py:1405
-#: ckan/controllers/package.py:1436 ckan/controllers/package.py:1544
-#: ckan/controllers/package.py:1595 ckanext/datapusher/plugin.py:59
-#: ckanext/datastore/controller.py:80 ckanext/resourceproxy/controller.py:33
-msgid "Resource not found"
-msgstr ""
-
 #: ckan/controllers/package.py:647
 msgid "Unauthorized to update dataset"
 msgstr ""
@@ -489,10 +1114,6 @@ msgstr ""
 
 #: ckan/controllers/package.py:653
 msgid "You must add at least one data resource"
-msgstr ""
-
-#: ckan/controllers/package.py:662 ckanext/datapusher/helpers.py:24
-msgid "Error"
 msgstr ""
 
 #: ckan/controllers/package.py:684
@@ -1050,7 +1671,7 @@ msgstr ""
 #: ckan/lib/navl/dictization_functions.py:32
 #: ckan/lib/navl/dictization_functions.py:35 ckan/lib/navl/validators.py:25
 #: ckan/lib/navl/validators.py:32 ckan/lib/navl/validators.py:52
-#: ckan/logic/action/get.py:2083 ckan/logic/action/update.py:259
+#: ckan/logic/action/get.py:2082 ckan/logic/action/update.py:259
 #: ckan/logic/validators.py:638
 msgid "Missing value"
 msgstr ""
@@ -1068,20 +1689,11 @@ msgstr ""
 msgid "Must be a Unicode string value"
 msgstr ""
 
-#: ckan/logic/__init__.py:98 ckan/logic/action/__init__.py:60
-#: ckan/templates/package/edit_base.html:21 ckan/templates/package/resources.html:5
-#: ckan/templates/package/snippets/package_context.html:12
-#: ckan/templates/package/snippets/resources.html:20
-#: ckan/templates/snippets/context/dataset.html:13
-#: ckanext/example_theme_docs/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:15
-msgid "Resources"
-msgstr ""
-
-#: ckan/logic/__init__.py:98 ckan/logic/action/__init__.py:60
+#: ckan/logic/__init__.py:99 ckan/logic/action/__init__.py:60
 msgid "Package resource(s) invalid"
 msgstr ""
 
-#: ckan/logic/__init__.py:105 ckan/logic/__init__.py:107
+#: ckan/logic/__init__.py:106 ckan/logic/__init__.py:108
 #: ckan/logic/action/__init__.py:62 ckan/logic/action/__init__.py:64
 msgid "Extras"
 msgstr ""
@@ -1089,24 +1701,6 @@ msgstr ""
 #: ckan/logic/converters.py:74 ckan/logic/converters.py:89
 #, python-format
 msgid "Tag vocabulary \"%s\" does not exist"
-msgstr ""
-
-#: ckan/logic/converters.py:121 ckan/logic/validators.py:214
-#: ckan/logic/validators.py:231 ckan/logic/validators.py:737
-#: ckan/templates/group/members.html:14 ckan/templates/organization/members.html:19
-#: ckanext/stats/templates/ckanext/stats/index.html:156
-msgid "User"
-msgstr ""
-
-#: ckan/logic/converters.py:146 ckan/logic/validators.py:149
-#: ckan/logic/validators.py:191 ckan/templates/package/read_base.html:19
-#: ckanext/stats/templates/ckanext/stats/index.html:89
-msgid "Dataset"
-msgstr ""
-
-#: ckan/logic/converters.py:171 ckan/logic/validators.py:244
-#: ckanext/stats/templates/ckanext/stats/index.html:113
-msgid "Group"
 msgstr ""
 
 #: ckan/logic/converters.py:180
@@ -1381,32 +1975,32 @@ msgstr ""
 msgid "Rating must be between %i and %i."
 msgstr ""
 
-#: ckan/logic/action/create.py:1066
+#: ckan/logic/action/create.py:1067
 msgid "Error sending the invite email, the user was not created: {0}"
 msgstr ""
 
-#: ckan/logic/action/create.py:1279 ckan/logic/action/create.py:1286
+#: ckan/logic/action/create.py:1280 ckan/logic/action/create.py:1287
 msgid "You must be logged in to follow users"
 msgstr ""
 
-#: ckan/logic/action/create.py:1299
+#: ckan/logic/action/create.py:1300
 msgid "You cannot follow yourself"
 msgstr ""
 
-#: ckan/logic/action/create.py:1307 ckan/logic/action/create.py:1364
-#: ckan/logic/action/create.py:1503
+#: ckan/logic/action/create.py:1308 ckan/logic/action/create.py:1365
+#: ckan/logic/action/create.py:1504
 msgid "You are already following {0}"
 msgstr ""
 
-#: ckan/logic/action/create.py:1338 ckan/logic/action/create.py:1346
+#: ckan/logic/action/create.py:1339 ckan/logic/action/create.py:1347
 msgid "You must be logged in to follow a dataset."
 msgstr ""
 
-#: ckan/logic/action/create.py:1404
+#: ckan/logic/action/create.py:1405
 msgid "User {username} does not exist."
 msgstr ""
 
-#: ckan/logic/action/create.py:1479 ckan/logic/action/create.py:1487
+#: ckan/logic/action/create.py:1480 ckan/logic/action/create.py:1488
 msgid "You must be logged in to follow a group."
 msgstr ""
 
@@ -1430,11 +2024,11 @@ msgid "REST API: Delete Member: %s"
 msgstr ""
 
 #: ckan/logic/action/delete.py:544 ckan/logic/action/delete.py:570
-#: ckan/logic/action/get.py:2482 ckan/logic/action/update.py:955
+#: ckan/logic/action/get.py:2481 ckan/logic/action/update.py:955
 msgid "id not in data"
 msgstr ""
 
-#: ckan/logic/action/delete.py:548 ckan/logic/action/get.py:2485
+#: ckan/logic/action/delete.py:548 ckan/logic/action/get.py:2484
 #: ckan/logic/action/update.py:959
 #, python-format
 msgid "Could not find vocabulary \"%s\""
@@ -1453,20 +2047,20 @@ msgstr ""
 msgid "You are not following {0}."
 msgstr ""
 
-#: ckan/logic/action/get.py:1097 ckan/logic/action/update.py:75
+#: ckan/logic/action/get.py:1096 ckan/logic/action/update.py:75
 #: ckan/logic/action/update.py:89
 msgid "Resource was not found."
 msgstr ""
 
-#: ckan/logic/action/get.py:2087
+#: ckan/logic/action/get.py:2086
 msgid "Do not specify if using \"query\" parameter"
 msgstr ""
 
-#: ckan/logic/action/get.py:2096
+#: ckan/logic/action/get.py:2095
 msgid "Must be <field>:<value> pair(s)"
 msgstr ""
 
-#: ckan/logic/action/get.py:2128
+#: ckan/logic/action/get.py:2127
 msgid "Field \"{field}\" not recognised in resource_search."
 msgstr ""
 
@@ -1805,28 +2399,6 @@ msgstr ""
 msgid "has sibling %s"
 msgstr ""
 
-#: ckan/public/base/javascript/modules/activity-stream.js:97
-#: ckan/public/base/javascript/modules/activity-stream.min.js:2
-#: ckan/public/base/javascript/modules/popover-context.js:62
-#: ckan/public/base/javascript/modules/popover-context.min.js:2
-#: ckan/templates/tests/mock_json_resource_preview_template.html:7
-#: ckan/templates/tests/mock_resource_preview_template.html:7
-#: ckanext/datastore/templates/package/snippets/data_api_button.html:7
-#: ckanext/example_theme_docs/v18_snippet_api/fanstatic/example_theme_popover.js:21
-#: ckanext/example_theme_docs/v18_snippet_api/fanstatic/example_theme_popover.min.js:1
-#: ckanext/example_theme_docs/v19_01_error/fanstatic/example_theme_popover.js:21
-#: ckanext/example_theme_docs/v19_01_error/fanstatic/example_theme_popover.min.js:1
-#: ckanext/example_theme_docs/v19_02_error_handling/fanstatic/example_theme_popover.js:8
-#: ckanext/example_theme_docs/v19_02_error_handling/fanstatic/example_theme_popover.min.js:1
-#: ckanext/example_theme_docs/v20_pubsub/fanstatic/example_theme_popover.js:8
-#: ckanext/example_theme_docs/v20_pubsub/fanstatic/example_theme_popover.min.js:1
-#: ckanext/example_theme_docs/v21_custom_jquery_plugin/fanstatic/example_theme_popover.js:8
-#: ckanext/example_theme_docs/v21_custom_jquery_plugin/fanstatic/example_theme_popover.min.js:1
-#: ckanext/reclineview/theme/templates/recline_view.html:14
-#: ckanext/textview/theme/templates/text_view.html:9
-msgid "Loading..."
-msgstr ""
-
 #: ckan/public/base/javascript/modules/api-info.js:96
 #: ckan/public/base/javascript/modules/api-info.min.js:2
 msgid "There is no API data to load for this resource"
@@ -1925,13 +2497,6 @@ msgstr ""
 #: ckan/templates/group/snippets/group_item.html:43
 #: ckan/templates/macros/form.html:235 ckan/templates/snippets/search_form.html:68
 msgid "Remove"
-msgstr ""
-
-#: ckan/public/base/javascript/modules/image-upload.js:80
-#: ckan/public/base/javascript/modules/image-upload.min.js:5
-#: ckan/templates/macros/form.html:412 ckanext/imageview/plugin.py:26
-#: ckanext/imageview/plugin.py:31
-msgid "Image"
 msgstr ""
 
 #: ckan/public/base/javascript/modules/image-upload.js:87
@@ -2241,12 +2806,6 @@ msgstr ""
 msgid "Download resource"
 msgstr ""
 
-#: ckan/templates/dataviewer/snippets/data_preview.html:23
-#: ckan/templates/package/snippets/resource_view.html:56
-#: ckanext/webpageview/theme/templates/webpage_view.html:2
-msgid "Your browser does not support iframes."
-msgstr ""
-
 #: ckan/templates/dataviewer/snippets/no_preview.html:3
 msgid "No preview available."
 msgstr ""
@@ -2336,7 +2895,7 @@ msgid "You have been invited to"
 msgstr ""
 
 #: ckan/templates/emails/invite_user.txt:5
-msgid "A user has already been created for you with the username"
+msgid "A user has already been created for you with the username "
 msgstr ""
 
 #: ckan/templates/emails/invite_user.txt:5
@@ -2366,7 +2925,7 @@ msgid "Message sent by"
 msgstr ""
 
 #: ckan/templates/emails/invite_user_subject.txt:1
-msgid "nvite for"
+msgid "Invite for"
 msgstr ""
 
 #: ckan/templates/emails/reset_password.txt:3
@@ -2458,19 +3017,6 @@ msgstr ""
 msgid "Members"
 msgstr ""
 
-#: ckan/templates/group/followers.html:3 ckan/templates/group/followers.html:6
-#: ckan/templates/group/snippets/info.html:32
-#: ckan/templates/package/followers.html:3 ckan/templates/package/followers.html:6
-#: ckan/templates/package/snippets/info.html:23
-#: ckan/templates/snippets/context/group.html:13
-#: ckan/templates/snippets/context/user.html:15
-#: ckan/templates/snippets/organization.html:55
-#: ckan/templates/user/followers.html:3 ckan/templates/user/followers.html:7
-#: ckan/templates/user/read_base.html:49
-#: ckanext/example_theme_docs/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:12
-msgid "Followers"
-msgstr ""
-
 #: ckan/templates/group/history.html:3 ckan/templates/group/history.html:6
 #: ckan/templates/package/history.html:3 ckan/templates/package/history.html:6
 msgid "History"
@@ -2482,28 +3028,6 @@ msgstr ""
 
 #: ckan/templates/group/index.html:20
 msgid "Search groups..."
-msgstr ""
-
-#: ckan/templates/group/index.html:20 ckan/templates/group/read.html:16
-#: ckan/templates/organization/bulk_process.html:97
-#: ckan/templates/organization/index.html:20
-#: ckan/templates/organization/read.html:20 ckan/templates/package/search.html:30
-#: ckan/templates/snippets/search_form.html:4
-#: ckan/templates/snippets/simple_search.html:10
-#: ckan/templates/snippets/sort_by.html:15
-#: ckanext/example_idatasetform/templates/package/search.html:13
-msgid "Name Ascending"
-msgstr ""
-
-#: ckan/templates/group/index.html:20 ckan/templates/group/read.html:17
-#: ckan/templates/organization/bulk_process.html:98
-#: ckan/templates/organization/index.html:20
-#: ckan/templates/organization/read.html:21 ckan/templates/package/search.html:31
-#: ckan/templates/snippets/search_form.html:4
-#: ckan/templates/snippets/simple_search.html:10
-#: ckan/templates/snippets/sort_by.html:16
-#: ckanext/example_idatasetform/templates/package/search.html:14
-msgid "Name Descending"
 msgstr ""
 
 #: ckan/templates/group/index.html:29
@@ -2579,11 +3103,6 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: ckan/templates/group/member_new.html:60
-#: ckanext/datastore/templates/datastore/dictionary.html:33
-msgid "Save"
-msgstr ""
-
 #: ckan/templates/group/member_new.html:77
 #: ckan/templates/organization/member_new.html:51
 msgid "What are roles?"
@@ -2607,21 +3126,6 @@ msgstr ""
 
 #: ckan/templates/group/new_group_form.html:19
 msgid "Create Group"
-msgstr ""
-
-#: ckan/templates/group/read.html:15 ckan/templates/organization/read.html:19
-#: ckan/templates/package/search.html:29 ckan/templates/snippets/sort_by.html:14
-#: ckanext/example_idatasetform/templates/package/search.html:12
-msgid "Relevance"
-msgstr ""
-
-#: ckan/templates/group/read.html:18
-#: ckan/templates/organization/bulk_process.html:99
-#: ckan/templates/organization/read.html:22 ckan/templates/package/search.html:32
-#: ckan/templates/package/snippets/resource_form.html:51
-#: ckan/templates/snippets/sort_by.html:17
-#: ckanext/example_idatasetform/templates/package/search.html:15
-msgid "Last Modified"
 msgstr ""
 
 #: ckan/templates/group/read.html:19 ckan/templates/organization/read.html:23
@@ -2658,16 +3162,6 @@ msgid "my-group"
 msgstr ""
 
 #: ckan/templates/group/snippets/group_form.html:20
-#: ckan/templates/organization/snippets/organization_form.html:20
-#: ckan/templates/package/snippets/package_basic_fields.html:19
-#: ckan/templates/package/snippets/resource_form.html:32
-#: ckan/templates/package/snippets/view_form.html:9
-#: ckanext/datastore/templates/datastore/dictionary.html:28
-#: ckanext/datastore/templates/package/resource_read.html:21
-msgid "Description"
-msgstr ""
-
-#: ckan/templates/group/snippets/group_form.html:20
 msgid "A little information about my group..."
 msgstr ""
 
@@ -2677,22 +3171,6 @@ msgstr ""
 
 #: ckan/templates/group/snippets/group_form.html:63
 msgid "Save Group"
-msgstr ""
-
-#: ckan/templates/group/snippets/group_item.html:32
-#: ckan/templates/organization/snippets/organization_item.html:31
-#: ckanext/example_theme_docs/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:23
-#: ckanext/example_theme_docs/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:22
-msgid "{num} Dataset"
-msgid_plural "{num} Datasets"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ckan/templates/group/snippets/group_item.html:34
-#: ckan/templates/organization/snippets/organization_item.html:33
-#: ckanext/example_theme_docs/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:25
-#: ckanext/example_theme_docs/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:24
-msgid "0 Datasets"
 msgstr ""
 
 #: ckan/templates/group/snippets/group_item.html:38
@@ -3629,12 +4107,6 @@ msgstr ""
 msgid "Remove Filter"
 msgstr ""
 
-#: ckan/templates/package/snippets/view_form_filters.html:46
-#: ckanext/reclineview/theme/public/recline_view.js:215
-#: ckanext/reclineview/theme/public/recline_view.min.js:14
-msgid "Filters"
-msgstr ""
-
 #: ckan/templates/package/snippets/view_help.html:2
 msgid "What's a view?"
 msgstr ""
@@ -3754,12 +4226,6 @@ msgstr ""
 
 #: ckan/templates/snippets/organization.html:48
 msgid "There is no description for this organization"
-msgstr ""
-
-#: ckan/templates/snippets/package_item.html:50
-#: ckan/templates/snippets/popular.html:3
-#: ckanext/example_idatasetform/templates/package/search.html:18
-msgid "Popular"
 msgstr ""
 
 #: ckan/templates/snippets/package_item.html:57
@@ -4174,470 +4640,5 @@ msgstr ""
 
 #: ckan/templates/user/snippets/user_search.html:5
 msgid "Search Users"
-msgstr ""
-
-#: ckanext/datapusher/helpers.py:21
-msgid "Complete"
-msgstr ""
-
-#: ckanext/datapusher/helpers.py:22
-msgid "Pending"
-msgstr ""
-
-#: ckanext/datapusher/helpers.py:23
-msgid "Submitting"
-msgstr ""
-
-#: ckanext/datapusher/helpers.py:29
-msgid "Not Uploaded Yet"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:12
-msgid "Upload to DataStore"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:19
-msgid "Upload error:"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:25
-#: ckanext/datapusher/templates/datapusher/resource_data.html:27
-msgid "Error:"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:36
-msgid "Error traceback:"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:48
-msgid "Status"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:52
-msgid "Last updated"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:56
-msgid "Never"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:62
-msgid "Upload Log"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:76
-msgid "Details"
-msgstr ""
-
-#: ckanext/datapusher/templates/datapusher/resource_data.html:83
-msgid "End of log"
-msgstr ""
-
-#: ckanext/datapusher/templates/package/resource_edit_base.html:5
-msgid "DataStore"
-msgstr ""
-
-#: ckanext/datastore/controller.py:53
-#, python-format
-msgid "format: must be one of %s"
-msgstr ""
-
-#: ckanext/datastore/controller.py:65
-msgid "DataStore resource not found"
-msgstr ""
-
-#: ckanext/datastore/backend/postgres.py:1059
-msgid ""
-"The data was invalid (for example: a numeric value is out of range or was "
-"inserted into a text field)."
-msgstr ""
-
-#: ckanext/datastore/logic/action.py:262 ckanext/datastore/logic/action.py:290
-#: ckanext/datastore/logic/action.py:348 ckanext/datastore/logic/action.py:459
-#: ckanext/datastore/logic/action.py:534 ckanext/datastore/logic/action.py:559
-msgid "Resource \"{0}\" was not found."
-msgstr ""
-
-#: ckanext/datastore/logic/auth.py:19
-msgid "User {0} not authorized to update resource {1}"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:19
-msgid "CKAN Data API"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:23
-msgid "Access resource data via a web API with powerful query support"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:24
-msgid ""
-" Further information in the <a       "
-"href=\"http://docs.ckan.org/en/latest/maintaining/datastore.html\" "
-"target=\"_blank\">main CKAN Data API and DataStore documentation</a>.</p> "
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:33
-msgid "Endpoints"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:37
-msgid "The Data API can be accessed via the following actions of the CKAN action API."
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:42
-msgid "Create"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:46
-msgid "Update / Insert"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:50
-msgid "Query"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:54
-msgid "Query (via SQL)"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:66
-msgid "Querying"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:70
-msgid "Query example (first 5 results)"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:75
-msgid "Query example (results containing 'jones')"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:80
-msgid "Query example (via SQL statement)"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:91
-msgid "Example: Javascript"
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:95
-msgid "A simple ajax (JSONP) request to the data API using jQuery."
-msgstr ""
-
-#: ckanext/datastore/templates/ajax_snippets/api_info.html:116
-msgid "Example: Python"
-msgstr ""
-
-#: ckanext/datastore/templates/datastore/dictionary.html:16
-msgid "Field {num}."
-msgstr ""
-
-#: ckanext/datastore/templates/datastore/dictionary.html:18
-msgid "Type Override"
-msgstr ""
-
-#: ckanext/datastore/templates/datastore/dictionary.html:25
-#: ckanext/datastore/templates/package/resource_read.html:20
-#: ckanext/datatablesview/templates/datatables/datatables_form.html:18
-msgid "Label"
-msgstr ""
-
-#: ckanext/datastore/templates/package/resource_edit_base.html:6
-#: ckanext/datastore/templates/package/resource_read.html:14
-msgid "Data Dictionary"
-msgstr ""
-
-#: ckanext/datastore/templates/package/resource_read.html:18
-#: ckanext/datatablesview/templates/datatables/datatables_form.html:17
-msgid "Column"
-msgstr ""
-
-#: ckanext/datastore/templates/package/resource_read.html:19
-msgid "Type"
-msgstr ""
-
-#: ckanext/datastore/templates/package/snippets/data_api_button.html:9
-msgid "Data API"
-msgstr ""
-
-#: ckanext/datatablesview/plugin.py:47 ckanext/reclineview/plugin.py:128
-msgid "Table"
-msgstr ""
-
-#: ckanext/datatablesview/templates/datatables/datatables_form.html:6
-msgid "Responsive display"
-msgstr ""
-
-#: ckanext/datatablesview/templates/datatables/datatables_form.html:12
-msgid "Show Columns"
-msgstr ""
-
-#: ckanext/datatablesview/templates/datatables/datatables_view.html:28
-msgid "Hide/Unhide Columns"
-msgstr ""
-
-#: ckanext/example_iconfigurer/templates/admin/config.html:11
-msgid "Datasets per page"
-msgstr ""
-
-#: ckanext/example_iconfigurer/templates/admin/config.html:13
-msgid "Test conf"
-msgstr ""
-
-#: ckanext/example_idatasetform/templates/package/search.html:16
-msgid "Custom Field Ascending"
-msgstr ""
-
-#: ckanext/example_idatasetform/templates/package/search.html:17
-msgid "Custom Field Descending"
-msgstr ""
-
-#: ckanext/example_idatasetform/templates/package/snippets/additional_info.html:6
-#: ckanext/example_idatasetform/templates/package/snippets/package_basic_fields.html:4
-#: ckanext/example_idatasetform/templates/package/snippets/resource_form.html:6
-msgid "Custom Text"
-msgstr ""
-
-#: ckanext/example_idatasetform/templates/package/snippets/package_basic_fields.html:4
-msgid "custom text"
-msgstr ""
-
-#: ckanext/example_idatasetform/templates/package/snippets/package_metadata_fields.html:11
-msgid "Country Code"
-msgstr ""
-
-#: ckanext/example_idatasetform/templates/package/snippets/resource_form.html:6
-msgid "custom resource text"
-msgstr ""
-
-#: ckanext/example_itranslation/templates/home/index.html:4
-msgid "This is an untranslated string"
-msgstr ""
-
-#: ckanext/example_theme_docs/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:20
-#: ckanext/example_theme_docs/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:19
-msgid "This group has no description"
-msgstr ""
-
-#: ckanext/example_theme_docs/v12_extra_public_dir/templates/home/snippets/promoted.html:4
-msgid "CKAN's data previewing tool has many powerful features"
-msgstr ""
-
-#: ckanext/imageview/theme/templates/image_form.html:3
-msgid "Image url"
-msgstr ""
-
-#: ckanext/imageview/theme/templates/image_form.html:3
-msgid "eg. http://example.com/image.jpg (if blank uses resource url)"
-msgstr ""
-
-#: ckanext/reclineview/plugin.py:101
-msgid "Data Explorer"
-msgstr ""
-
-#: ckanext/reclineview/plugin.py:171
-#: ckanext/reclineview/theme/public/recline_view.js:200
-#: ckanext/reclineview/theme/public/recline_view.min.js:14
-msgid "Graph"
-msgstr ""
-
-#: ckanext/reclineview/plugin.py:231
-#: ckanext/reclineview/theme/public/recline_view.js:207
-#: ckanext/reclineview/theme/public/recline_view.min.js:14
-msgid "Map"
-msgstr ""
-
-#: ckanext/reclineview/theme/public/recline_view.js:28
-#: ckanext/reclineview/theme/public/recline_view.min.js:1
-msgid "error loading view"
-msgstr ""
-
-#: ckanext/reclineview/theme/public/recline_view.js:75
-#: ckanext/reclineview/theme/public/recline_view.min.js:5
-msgid "Could not load view"
-msgstr ""
-
-#: ckanext/reclineview/theme/public/recline_view.js:77
-#: ckanext/reclineview/theme/public/recline_view.min.js:5
-msgid "DataStore returned an error"
-msgstr ""
-
-#: ckanext/reclineview/theme/public/recline_view.js:79
-#: ckanext/reclineview/theme/public/recline_view.min.js:5
-msgid "DataProxy returned an error"
-msgstr ""
-
-#: ckanext/reclineview/theme/public/recline_view.js:193
-#: ckanext/reclineview/theme/public/recline_view.min.js:14
-msgid "Grid"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:3
-#: ckanext/reclineview/theme/templates/recline_map_form.html:3
-msgid "Row offset"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:3
-#: ckanext/reclineview/theme/templates/recline_map_form.html:3
-msgid "eg: 0"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:4
-#: ckanext/reclineview/theme/templates/recline_map_form.html:4
-msgid "Number of rows"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:4
-#: ckanext/reclineview/theme/templates/recline_map_form.html:4
-msgid "eg: 100"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:6
-msgid "Graph type"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:7
-msgid "Group (Axis 1)"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_graph_form.html:8
-msgid "Series (Axis 2)"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_map_form.html:6
-msgid "Field type"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_map_form.html:7
-msgid "Latitude field"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_map_form.html:8
-msgid "Longitude field"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_map_form.html:9
-msgid "GeoJSON field"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_map_form.html:10
-msgid "Auto zoom to features"
-msgstr ""
-
-#: ckanext/reclineview/theme/templates/recline_map_form.html:11
-msgid "Cluster markers"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:10
-msgid "Total number of Datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:17
-#: ckanext/stats/templates/ckanext/stats/index.html:40
-msgid "Date"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:18
-msgid "Total datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:33
-#: ckanext/stats/templates/ckanext/stats/index.html:179
-msgid "Dataset Revisions per Week"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:41
-msgid "All dataset revisions"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:42
-msgid "New datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:58
-#: ckanext/stats/templates/ckanext/stats/index.html:180
-msgid "Top Rated Datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:64
-msgid "Average rating"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:65
-msgid "Number of ratings"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:79
-msgid "No ratings"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:84
-#: ckanext/stats/templates/ckanext/stats/index.html:181
-msgid "Most Edited Datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:90
-msgid "Number of edits"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:103
-msgid "No edited datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:108
-#: ckanext/stats/templates/ckanext/stats/index.html:182
-msgid "Largest Groups"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:114
-msgid "Number of datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:127
-msgid "No groups"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:132
-#: ckanext/stats/templates/ckanext/stats/index.html:183
-msgid "Top Tags"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:136
-msgid "Tag Name"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:137
-#: ckanext/stats/templates/ckanext/stats/index.html:157
-msgid "Number of Datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:152
-#: ckanext/stats/templates/ckanext/stats/index.html:184
-msgid "Users Creating Most Datasets"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:175
-msgid "Statistics Menu"
-msgstr ""
-
-#: ckanext/stats/templates/ckanext/stats/index.html:178
-msgid "Total Number of Datasets"
-msgstr ""
-
-#: ckanext/textview/plugin.py:67 ckanext/textview/plugin.py:69
-msgid "Text"
-msgstr ""
-
-#: ckanext/webpageview/plugin.py:21 ckanext/webpageview/plugin.py:26
-msgid "Website"
-msgstr ""
-
-#: ckanext/webpageview/theme/templates/webpage_form.html:3
-msgid "Web Page url"
-msgstr ""
-
-#: ckanext/webpageview/theme/templates/webpage_form.html:3
-msgid "eg. http://example.com (if blank uses resource url)"
 msgstr ""
 

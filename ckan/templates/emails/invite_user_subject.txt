@@ -1,1 +1,1 @@
-{% trans %}nvite for{% endtrans %} {{ site_title }}
+{% trans %}Invite for{% endtrans %} {{ site_title }}
