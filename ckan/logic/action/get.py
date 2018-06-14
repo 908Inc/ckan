@@ -377,12 +377,14 @@ def _group_or_org_list(context, data_dict, is_org=False):
     if groups:
         query = query.filter(model.Group.name.in_(groups))
     if q:
-        q = u'%{0}%'.format(q)
-        query = query.filter(_or_(
-            model.Group.name.ilike(q),
-            model.Group.title.ilike(q),
-            model.Group.description.ilike(q),
-        ))
+        query_words_list = q.split()
+        for el in query_words_list:
+            q = u'%{0}%'.format(el)
+            query = query.filter(_or_(
+                model.Group.name.ilike(q),
+                model.Group.title.ilike(q),
+                # model.Group.description.ilike(q),
+            ))
 
     query = query.filter(model.Group.is_organization == is_org)
     query = query.filter(model.Group.type == group_type)
