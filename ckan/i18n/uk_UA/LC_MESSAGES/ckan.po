@@ -102,7 +102,7 @@ msgstr "Кінець історії"
 
 #: ckanext/datapusher/templates/package/resource_edit_base.html:5
 msgid "DataStore"
-msgstr "Архів даних"
+msgstr "Словник даних"
 
 #: ckanext/datastore/controller.py:53
 #, python-format
