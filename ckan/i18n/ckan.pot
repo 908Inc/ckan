@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-29 14:31+0000\n"
+"POT-Creation-Date: 2018-07-02 07:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2327,7 +2327,6 @@ msgid "Select"
 msgstr ""
 
 #: ckan/templates/emails/invite_user.txt:1
-#: ckan/templates/emails/reset_password.txt:1
 msgid "Dear"
 msgstr ""
 
@@ -2369,6 +2368,10 @@ msgstr ""
 msgid "Invite for"
 msgstr ""
 
+#: ckan/templates/emails/reset_password.txt:1
+msgid "Dear open data portal user"
+msgstr ""
+
 #: ckan/templates/emails/reset_password.txt:3
 msgid "You have requested your password on"
 msgstr ""
@@ -2382,7 +2385,7 @@ msgid "Please click the following link to confirm this request:"
 msgstr ""
 
 #: ckan/templates/emails/reset_password.txt:14
-msgid "If you received this email by accident just delete it"
+msgid "If you received this email by accident just delete it."
 msgstr ""
 
 #: ckan/templates/emails/reset_password_subject.txt:1
