@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.0b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-29 14:31+0000\n"
+"POT-Creation-Date: 2018-07-02 07:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kate Svetocheva <kate.svetocheva@linkdigital.com.au>, "
 "2017\n"
@@ -2411,7 +2411,6 @@ msgid "Select"
 msgstr "Вибрати"
 
 #: ckan/templates/emails/invite_user.txt:1
-#: ckan/templates/emails/reset_password.txt:1
 msgid "Dear"
 msgstr "Дорогий"
 
@@ -2454,6 +2453,10 @@ msgstr "Повідомлення надіслано"
 #: ckan/templates/emails/invite_user_subject.txt:1
 msgid "Invite for"
 msgstr "Запрошення до Data.gov.ua"
+
+#: ckan/templates/emails/reset_password.txt:1
+msgid "Dear open data portal user"
+msgstr "Шановний користувач Єдиного державного веб-порталу відкритих даних,"
 
 #: ckan/templates/emails/reset_password.txt:3
 msgid "You have requested your password on"
@@ -4872,5 +4875,4 @@ msgid "eg. http://example.com (if blank uses resource url)"
 msgstr ""
 "наприклад, http://example.com (якщо пусто, використовується посилання на "
 "ресурс)"
-
 
