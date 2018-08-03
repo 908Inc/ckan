@@ -57,6 +57,9 @@ class Stats(object):
     def top_views_recent_packages(cls):
         from ckan.lib.search import SearchError, SearchQueryError
 
+        rows_number = 10
+        sort_by = 'views_recent desc'
+
         try:
             context = {'model': model, 'user': c.user,
                        'auth_user_obj': c.userobj}
@@ -64,7 +67,6 @@ class Stats(object):
         except NotAuthorized:
             abort(403, _('Not authorized to see this page'))
 
-        sort_by = 'views_recent desc'
 
         try:
             context = {'model': model, 'session': model.Session,
@@ -75,7 +77,7 @@ class Stats(object):
                 'q': '',
                 'fq': '',
                 'facet.field': [],
-                'rows': 10,
+                'rows': rows_number,
                 'start': 0,
                 'sort': sort_by,
                 'extras': {},
