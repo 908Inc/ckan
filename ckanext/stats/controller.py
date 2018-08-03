@@ -12,7 +12,7 @@ class StatsController(BaseController):
         c = p.toolkit.c
         stats = stats_lib.Stats()
         rev_stats = stats_lib.RevisionStats()
-        c.top_rated_packages = stats.top_rated_packages()
+        # c.top_rated_packages = stats.top_rated_packages()
         c.most_edited_packages = stats.most_edited_packages()
         c.largest_groups = stats.largest_groups()
         c.top_tags = stats.top_tags()
@@ -21,6 +21,7 @@ class StatsController(BaseController):
         c.deleted_packages_by_week = rev_stats.get_by_week('deleted_packages')
         c.num_packages_by_week = rev_stats.get_num_packages_by_week()
         c.package_revisions_by_week = rev_stats.get_by_week('package_revisions')
+        c.top_package_views_recent = stats.top_views_recent_packages()
 
         c.raw_packages_by_week = []
         for week_date, num_packages, cumulative_num_packages in c.num_packages_by_week:

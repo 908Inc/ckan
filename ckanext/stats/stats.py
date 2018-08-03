@@ -1,12 +1,26 @@
 # encoding: utf-8
 
 import datetime
-
-from ckan.common import config
+import logging
 from sqlalchemy import Table, select, join, func, and_
 
-import ckan.plugins as p
+from paste.deploy.converters import asbool
+from ckan.common import config, OrderedDict, _, c
+import ckan.lib.base as base
+import ckan.lib.helpers as h
+import ckan.logic as logic
 import ckan.model as model
+import ckan.plugins as p
+
+
+log = logging.getLogger(__name__)
+
+abort = base.abort
+check_access = logic.check_access
+get_action = logic.get_action
+NotAuthorized = logic.NotAuthorized
+
+
 
 cache_enabled = p.toolkit.asbool(config.get('ckanext.stats.cache_enabled', 'True'))
 
@@ -38,6 +52,53 @@ class Stats(object):
         res_ids = model.Session.execute(sql).fetchall()
         res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
         return res_pkgs
+
+    @classmethod
+    def top_views_recent_packages(cls):
+        from ckan.lib.search import SearchError, SearchQueryError
+
+        rows_number = 10
+        sort_by = 'views_recent desc'
+
+        try:
+            context = {'model': model, 'user': c.user,
+                       'auth_user_obj': c.userobj}
+            check_access('site_read', context)
+        except NotAuthorized:
+            abort(403, _('Not authorized to see this page'))
+
+
+        try:
+            context = {'model': model, 'session': model.Session,
+                       'user': c.user, 'for_view': True,
+                       'auth_user_obj': c.userobj}
+
+            data_dict = {
+                'q': '',
+                'fq': '',
+                'facet.field': [],
+                'rows': rows_number,
+                'start': 0,
+                'sort': sort_by,
+                'extras': {},
+                'include_private': asbool(config.get(
+                    'ckan.search.default_include_private', True)),
+            }
+
+            query = get_action('package_search')(context, data_dict)
+        except SearchQueryError, se:
+            # User's search parameters are invalid, in such a way that is not
+            # achievable with the web interface, so return a proper error to
+            # discourage spiders which are the main cause of this.
+            log.info('Dataset search query rejected: %r', se.args)
+            return []
+        except SearchError, se:
+            # May be bad input from the user, but may also be more serious like
+            # bad code causing a SOLR syntax error, or a problem connecting to
+            # SOLR
+            log.error('Dataset search error: %r', se.args)
+            return []
+        return query.get('results', [])
 
     @classmethod
     def most_edited_packages(cls, limit=10):
