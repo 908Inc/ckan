@@ -56,21 +56,21 @@
 
     <section id="stats-top-rated" class="module-content tab-content">
       <h2>{{ _('Top Rated Datasets') }}</h2>
-      {% if c.top_rated_packages %}
+      {% if c.top_package_views_recent %}
         <table class="table table-chunky table-bordered table-striped">
           <thead>
             <tr>
-              <th>Dataset</th>
-              <th class="metric">{{ _('Average rating') }}</th>
-              <th class="metric">{{ _('Number of ratings') }}</th>
+              <th class="metric">{{ _('Rating') }}</th>
+              <th>{{ _('Dataset') }}</th>
+              <th class="metric">{{ _('Organization') }}</th>
             </tr>
           </thead>
           <tbody>
-            {% for package, rating, num_ratings in c.top_rated_packages %}
+            {% for package in c.top_package_views_recent %}
               <tr>
+                <td class="metric">{{ loop.index }}</td>
                 <th>{{ h.link_to(package.title or package.name, h.url_for(controller='package', action='read', id=package.name)) }}</th>
-                <td class="metric">{{ rating }}</td>
-                <td class="metric">{{ num_ratings }}</td>
+                <td class="metric">{{ h.link_to(package.organization.title or package.organization.name, h.url_for(controller='organization', action='read', id=package.organization.name)) }}</td>
               </tr>
             {% endfor %}
           </tbody>
