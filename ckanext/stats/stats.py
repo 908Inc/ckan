@@ -93,9 +93,11 @@ class Stats(object):
         except SearchError, se:
             log.error('Dataset search error: %r', se.args)
             return []
+
         results = query.get('results', [])
         for package in results:
             package['tracking_summary'] = model.TrackingSummary.get_for_package(package['id'])
+
         return results
 
     @classmethod
