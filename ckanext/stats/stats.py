@@ -81,25 +81,16 @@ class Stats(object):
                 'start': 0,
                 'sort': sort_by,
                 'extras': {},
-                # 'fl': ['id', 'data_dict', 'views_recent'],
-                # 'include_tracking': True,
                 'include_private': asbool(config.get(
                     'ckan.search.default_include_private', True)),
             }
 
             query = get_action('package_search')(context, data_dict)
 
-            # print 'RESULT: {}'.format(query)
         except SearchQueryError, se:
-            # User's search parameters are invalid, in such a way that is not
-            # achievable with the web interface, so return a proper error to
-            # discourage spiders which are the main cause of this.
             log.info('Dataset search query rejected: %r', se.args)
             return []
         except SearchError, se:
-            # May be bad input from the user, but may also be more serious like
-            # bad code causing a SOLR syntax error, or a problem connecting to
-            # SOLR
             log.error('Dataset search error: %r', se.args)
             return []
         results = query.get('results', [])
