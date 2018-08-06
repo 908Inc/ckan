@@ -81,11 +81,15 @@ class Stats(object):
                 'start': 0,
                 'sort': sort_by,
                 'extras': {},
+                # 'fl': ['id', 'data_dict', 'views_recent'],
+                # 'include_tracking': True,
                 'include_private': asbool(config.get(
                     'ckan.search.default_include_private', True)),
             }
 
             query = get_action('package_search')(context, data_dict)
+
+            # print 'RESULT: {}'.format(query)
         except SearchQueryError, se:
             # User's search parameters are invalid, in such a way that is not
             # achievable with the web interface, so return a proper error to
@@ -98,7 +102,10 @@ class Stats(object):
             # SOLR
             log.error('Dataset search error: %r', se.args)
             return []
-        return query.get('results', [])
+        results = query.get('results', [])
+        for package in results:
+            package['tracking_summary'] = model.TrackingSummary.get_for_package(package['id'])
+        return results
 
     @classmethod
     def most_edited_packages(cls, limit=10):
