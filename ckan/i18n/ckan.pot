@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckan 2.7.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-02 07:15+0000\n"
+"POT-Creation-Date: 2018-08-07 08:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,6 +112,7 @@ msgstr ""
 #: ckan/controllers/user.py:57 ckan/controllers/user.py:82
 #: ckan/controllers/user.py:85 ckan/controllers/user.py:116
 #: ckan/controllers/user.py:592 ckanext/datapusher/plugin.py:68
+#: ckanext/stats/stats.py:68
 msgid "Not authorized to see this page"
 msgstr ""
 
@@ -1094,18 +1095,19 @@ msgstr ""
 #: ckan/logic/converters.py:121 ckan/logic/validators.py:214
 #: ckan/logic/validators.py:231 ckan/logic/validators.py:737
 #: ckan/templates/group/members.html:14 ckan/templates/organization/members.html:19
-#: ckanext/stats/templates/ckanext/stats/index.html:156
+#: ckanext/stats/templates/ckanext/stats/index.html:158
 msgid "User"
 msgstr ""
 
 #: ckan/logic/converters.py:146 ckan/logic/validators.py:149
 #: ckan/logic/validators.py:191 ckan/templates/package/read_base.html:19
-#: ckanext/stats/templates/ckanext/stats/index.html:89
+#: ckanext/stats/templates/ckanext/stats/index.html:64
+#: ckanext/stats/templates/ckanext/stats/index.html:91
 msgid "Dataset"
 msgstr ""
 
 #: ckan/logic/converters.py:171 ckan/logic/validators.py:244
-#: ckanext/stats/templates/ckanext/stats/index.html:113
+#: ckanext/stats/templates/ckanext/stats/index.html:115
 msgid "Group"
 msgstr ""
 
@@ -3420,6 +3422,7 @@ msgstr ""
 
 #: ckan/templates/package/snippets/package_basic_fields.html:70
 #: ckan/templates/snippets/organization.html:23
+#: ckanext/stats/templates/ckanext/stats/index.html:66
 msgid "Organization"
 msgstr ""
 
@@ -4550,7 +4553,7 @@ msgid "Total datasets"
 msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:33
-#: ckanext/stats/templates/ckanext/stats/index.html:179
+#: ckanext/stats/templates/ckanext/stats/index.html:181
 msgid "Dataset Revisions per Week"
 msgstr ""
 
@@ -4563,72 +4566,72 @@ msgid "New datasets"
 msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:58
-#: ckanext/stats/templates/ckanext/stats/index.html:180
+#: ckanext/stats/templates/ckanext/stats/index.html:182
 msgid "Top Rated Datasets"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:64
-msgid "Average rating"
+#: ckanext/stats/templates/ckanext/stats/index.html:63
+msgid "Rating"
 msgstr ""
 
 #: ckanext/stats/templates/ckanext/stats/index.html:65
-msgid "Number of ratings"
+msgid "Total Views"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:79
+#: ckanext/stats/templates/ckanext/stats/index.html:81
 msgid "No ratings"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:84
-#: ckanext/stats/templates/ckanext/stats/index.html:181
+#: ckanext/stats/templates/ckanext/stats/index.html:86
+#: ckanext/stats/templates/ckanext/stats/index.html:183
 msgid "Most Edited Datasets"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:90
+#: ckanext/stats/templates/ckanext/stats/index.html:92
 msgid "Number of edits"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:103
+#: ckanext/stats/templates/ckanext/stats/index.html:105
 msgid "No edited datasets"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:108
-#: ckanext/stats/templates/ckanext/stats/index.html:182
+#: ckanext/stats/templates/ckanext/stats/index.html:110
+#: ckanext/stats/templates/ckanext/stats/index.html:184
 msgid "Largest Groups"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:114
+#: ckanext/stats/templates/ckanext/stats/index.html:116
 msgid "Number of datasets"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:127
+#: ckanext/stats/templates/ckanext/stats/index.html:129
 msgid "No groups"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:132
-#: ckanext/stats/templates/ckanext/stats/index.html:183
+#: ckanext/stats/templates/ckanext/stats/index.html:134
+#: ckanext/stats/templates/ckanext/stats/index.html:185
 msgid "Top Tags"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:136
+#: ckanext/stats/templates/ckanext/stats/index.html:138
 msgid "Tag Name"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:137
-#: ckanext/stats/templates/ckanext/stats/index.html:157
+#: ckanext/stats/templates/ckanext/stats/index.html:139
+#: ckanext/stats/templates/ckanext/stats/index.html:159
 msgid "Number of Datasets"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:152
-#: ckanext/stats/templates/ckanext/stats/index.html:184
+#: ckanext/stats/templates/ckanext/stats/index.html:154
+#: ckanext/stats/templates/ckanext/stats/index.html:186
 msgid "Users Creating Most Datasets"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:175
+#: ckanext/stats/templates/ckanext/stats/index.html:177
 msgid "Statistics Menu"
 msgstr ""
 
-#: ckanext/stats/templates/ckanext/stats/index.html:178
+#: ckanext/stats/templates/ckanext/stats/index.html:180
 msgid "Total Number of Datasets"
 msgstr ""
 
