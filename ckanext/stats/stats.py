@@ -58,7 +58,7 @@ class Stats(object):
         from ckan.lib.search import SearchError, SearchQueryError
 
         rows_number = 10
-        sort_by = 'views_recent desc'
+        sort_by = 'views_total desc'
 
         try:
             context = {'model': model, 'user': c.user,
