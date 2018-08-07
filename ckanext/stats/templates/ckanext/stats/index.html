@@ -62,7 +62,7 @@
             <tr>
               <th class="metric">{{ _('Rating') }}</th>
               <th>{{ _('Dataset') }}</th>
-              <th>{{ _('Views') }}</th>
+              <th>{{ _('Resent Views') }} / {{ _('Total Views') }}</th>
               <th class="metric">{{ _('Organization') }}</th>
             </tr>
           </thead>
@@ -71,7 +71,7 @@
               <tr>
                 <td class="metric">{{ loop.index }}</td>
                 <td>{{ h.link_to(package.title or package.name, h.url_for(controller='package', action='read', id=package.name)) }}</td>
-                <td>{{ package.tracking_summary.recent }}</td>
+                <td>{{ package.tracking_summary.recent }} / {{ package.tracking_summary.total }}</td>
                 <td class="metric">{{ h.link_to(package.organization.title or package.organization.name, h.url_for(controller='organization', action='read', id=package.organization.name)) }}</td>
               </tr>
             {% endfor %}
