@@ -72,7 +72,7 @@
                 <td class="metric">{{ loop.index }}</td>
                 <td class="metric">{{ h.link_to(package.organization.title or package.organization.name, h.url_for(controller='organization', action='read', id=package.organization.name)) }}</td>
                 <td>{{ h.link_to(package.title or package.name, h.url_for(controller='package', action='read', id=package.name)) }}</td>
-                <td>{{ package.tracking_summary.recent }} / {{ package.tracking_summary.total }}</td>
+                <td>{{ package.tracking_summary.total }}</td>
               </tr>
             {% endfor %}
           </tbody>
