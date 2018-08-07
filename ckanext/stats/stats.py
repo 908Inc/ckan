@@ -86,19 +86,19 @@ class Stats(object):
             }
 
             query = get_action('package_search')(context, data_dict)
+
         except SearchQueryError, se:
-            # User's search parameters are invalid, in such a way that is not
-            # achievable with the web interface, so return a proper error to
-            # discourage spiders which are the main cause of this.
             log.info('Dataset search query rejected: %r', se.args)
             return []
         except SearchError, se:
-            # May be bad input from the user, but may also be more serious like
-            # bad code causing a SOLR syntax error, or a problem connecting to
-            # SOLR
             log.error('Dataset search error: %r', se.args)
             return []
-        return query.get('results', [])
+
+        results = query.get('results', [])
+        for package in results:
+            package['tracking_summary'] = model.TrackingSummary.get_for_package(package['id'])
+
+        return results
 
     @classmethod
     def most_edited_packages(cls, limit=10):
