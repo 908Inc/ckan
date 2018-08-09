@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+from jinja2 import TemplateNotFound
 import ckan.lib.base as base
 import ckan.lib.render
 from ckan.common import response
@@ -34,12 +35,13 @@ class TemplateController(base.BaseController):
         # Default content-type is text/html
         try:
             return base.render(url)
-        except ckan.lib.render.TemplateNotFound:
+        except (ckan.lib.render.TemplateNotFound, TemplateNotFound):
             if url.endswith(u'.html'):
                 base.abort(404)
             url += u'.html'
             response.headers[u'Content-Type'] = u'text/html; charset=utf-8'
             try:
                 return base.render(url)
-            except ckan.lib.render.TemplateNotFound:
+            except (ckan.lib.render.TemplateNotFound, TemplateNotFound):
                 base.abort(404)
+
