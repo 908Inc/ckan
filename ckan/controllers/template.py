@@ -44,4 +44,3 @@ class TemplateController(base.BaseController):
                 return base.render(url)
             except (ckan.lib.render.TemplateNotFound, TemplateNotFound):
                 base.abort(404)
-
