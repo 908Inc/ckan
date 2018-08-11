@@ -97,6 +97,8 @@ class UserController(base.BaseController):
                        handler_name)
 
     def index(self):
+        if not c.userobj or not c.userobj.sysadmin:
+            abort(404)
         page = h.get_page_number(request.params)
         c.q = request.params.get('q', '')
         c.order_by = request.params.get('order_by', 'name')
