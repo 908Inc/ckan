@@ -17,7 +17,7 @@
         <div class="alert alert-error">
             <span style="float: left; margin-top: 10px;"><strong>{{ _('Upload error:') }}</strong></span>
             <span style="float: right">
-            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="upload-error">{% trans %}Error text{% endtrans %}</button>
+            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="upload-error">{% trans %}Technical information{% endtrans %}</button>
         </span>
             <div style="clear: both"></div>
             <div id="upload-error" style="margin-top: 18px; display: none">
@@ -30,7 +30,7 @@
                 {# DataPusher < 0.0.3 #}
                 <span style="float: left; margin-top: 10px;"><strong>{{ _('Error processing resource') }}</strong></span>
                 <span style="float: right">
-            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="error-string">{% trans %}Error text{% endtrans %}</button>
+            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="error-string">{% trans %}Technical information{% endtrans %}</button>
         </span>
                 <div style="clear: both"></div>
                 <div id="error-string" style="margin-top: 26px; display: none">
@@ -39,7 +39,7 @@
             {% elif status.task_info.error is mapping %}
                 <span style="float: left; margin-top: 10px;"><strong>{{ _('Error processing resource') }}</strong></span>
                 <span style="float: right">
-            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="error-mapping">{% trans %}Error text{% endtrans %}</button>
+            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="error-mapping">{% trans %}Technical information{% endtrans %}</button>
         </span>
                 <div style="clear: both"></div>
                 <div id="error-mapping" style="margin-top: 26px; display: none">
@@ -55,7 +55,7 @@
             {% elif status.task_info.error is iterable %}
                 <span style="float: left; margin-top: 10px;"><strong>{{ _('Error processing resource') }}</strong></span>
                 <span style="float: right">
-            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="error-traceback">{% trans %}Error text{% endtrans %}</button>
+            <button class="btn btn-outline-primary btn-premoderation btn-collapse-error" data-target="error-traceback">{% trans %}Technical information{% endtrans %}</button>
         </span>
                 <div style="clear: both"></div>
                 <div id="error-traceback" style="margin-top: 26px; display: none">

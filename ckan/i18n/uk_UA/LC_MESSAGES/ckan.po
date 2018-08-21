@@ -4883,8 +4883,8 @@ msgstr ""
 #: ckanext/datapusher/templates/datapusher/resource_data.html:33
 #: ckanext/datapusher/templates/datapusher/resource_data.html:42
 #: ckanext/datapusher/templates/datapusher/resource_data.html:58
-msgid "Error text"
-msgstr "Інформація про помилку"
+msgid "Technical information"
+msgstr "Технічная інформація"
 
 #: ckanext/datapusher/templates/datapusher/resource_data.html:31
 #: ckanext/datapusher/templates/datapusher/resource_data.html:40
