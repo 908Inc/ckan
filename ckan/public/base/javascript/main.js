@@ -35,7 +35,7 @@ this.ckan = this.ckan || {};
         moment.locale(locale);
         var date = moment(jQuery(this).data('datetime'));
         if (date.isValid()) {
-            jQuery(this).html(date.format("LL, LT ([UTC]Z)")); 
+            jQuery(this).html(date.format("LL, LT ([UTC]Z)"));
         }
         jQuery(this).show();
     })
@@ -98,4 +98,10 @@ $(function() {
   $(".hide-filters").click(function() {
     $("body").removeClass("filters-modal");
   });
+});
+
+$(function() {
+  $('.btn-collapse-error').on('click', function () {
+    $('#' + $(this).data('target')).toggle('slide');
+ });
 });
