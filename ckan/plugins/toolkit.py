@@ -58,6 +58,8 @@ class _Toolkit(object):
         'missing',
         # action not found exception (ckan.logic.NotFound)
         'ObjectNotFound',
+        # action not found exception (ckan.logic.NotFound)
+        'NotFound',
         # action not authorized exception
         'NotAuthorized',
         # validator not found exception
@@ -238,6 +240,7 @@ For example: ``bar = toolkit.aslist(config.get('ckan.foo.bar', []))``
         t['navl_validate'] = dictization_functions.validate
         t['missing'] = dictization_functions.missing
         t['ObjectNotFound'] = logic.NotFound  # Name change intentional
+        t['NotFound'] = logic.NotFound  # Name change intentional
         t['NotAuthorized'] = logic.NotAuthorized
         t['ValidationError'] = logic.ValidationError
         t['StopOnError'] = dictization_functions.StopOnError
