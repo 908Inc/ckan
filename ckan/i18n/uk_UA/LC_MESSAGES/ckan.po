@@ -4879,3 +4879,15 @@ msgstr ""
 "наприклад, http://example.com (якщо пусто, використовується посилання на "
 "ресурс)"
 
+#: ckanext/datapusher/templates/datapusher/resource_data.html:20
+#: ckanext/datapusher/templates/datapusher/resource_data.html:33
+#: ckanext/datapusher/templates/datapusher/resource_data.html:42
+#: ckanext/datapusher/templates/datapusher/resource_data.html:58
+msgid "Error text"
+msgstr "Інформація про помилку"
+
+#: ckanext/datapusher/templates/datapusher/resource_data.html:31
+#: ckanext/datapusher/templates/datapusher/resource_data.html:40
+#: ckanext/datapusher/templates/datapusher/resource_data.html:56
+msgid "Error processing resource"
+msgstr "Помилка про обробці ресурсу. Перевірьте коректність структури файлу."
