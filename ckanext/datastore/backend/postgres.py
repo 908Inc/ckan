@@ -867,8 +867,7 @@ def create_table(context, data_dict):
     for field_id in field_ids:
         # Postgres has a limit of 63 characters for a column name
         if len(field_id) > 63:
-            message = 'Column heading "{0}" exceeds limit of 63 '\
-                'characters.'.format(field_id)
+            message = u'Column heading "{0}" exceeds limit of 63 characters.'.format(field_id)
             fields_errors.append(message)
 
     if fields_errors:
