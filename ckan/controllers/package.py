@@ -688,6 +688,10 @@ class PackageController(base.BaseController):
             if save_action == 'go-metadata':
                 # XXX race condition if another user edits/deletes
                 data_dict = get_action('package_show')(context, {'id': id})
+                # DGUA. Set if tags exists as tag_string is required field
+                if not data.get('tag_string'):
+                    data_dict['tag_string'] = ', '.join(h.dict_list_reduce(
+                        data_dict.get('tags', {}), 'name'))
                 get_action('package_update')(
                     dict(context, allow_state_change=True),
                     dict(data_dict, state='active'))

@@ -11,6 +11,7 @@ from socket import error as socket_error
 import paste.deploy.converters
 from sqlalchemy import func
 
+import ckan.lib.helpers as h
 import ckan.lib.plugins as lib_plugins
 import ckan.logic as logic
 import ckan.plugins as plugins
@@ -308,6 +309,11 @@ def resource_create(context, data_dict):
             data_dict['size'] = upload.filesize
 
     pkg_dict['resources'].append(data_dict)
+
+    # DGUA. Set if tags exists as tag_string is required field
+    if not pkg_dict.get('tag_string'):
+        pkg_dict['tag_string'] = ', '.join(h.dict_list_reduce(
+            pkg_dict.get('tags', {}), 'name'))
 
     try:
         context['defer_commit'] = True
