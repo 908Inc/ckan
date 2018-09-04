@@ -81,11 +81,6 @@ def resource_update(context, data_dict):
     pkg_dict = _get_action('package_show')(dict(context, return_type='dict'),
         {'id': package_id})
 
-    # DGUA. Set if tags exists as tag_string is required field
-    if not pkg_dict.get('tag_string'):
-        pkg_dict['tag_string'] = ', '.join(h.dict_list_reduce(
-            pkg_dict.get('tags', {}), 'name'))
-
     for n, p in enumerate(pkg_dict['resources']):
         if p['id'] == id:
             break
