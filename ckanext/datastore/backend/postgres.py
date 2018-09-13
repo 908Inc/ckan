@@ -87,19 +87,6 @@ is_single_statement = datastore_helpers.is_single_statement
 _engines = {}
 
 
-def get_unique_fields(dict_list):
-    result = []
-    ids = list(set([el['id'] for el in dict_list]))
-    for el in dict_list:
-        try:
-            if el['id'] in ids:
-                ids.remove(el['id'])
-                result.append(el)
-        except ValueError:
-            break
-    return result
-
-
 def literal_string(s):
     """
     Return s as a postgres literal string
@@ -929,8 +916,6 @@ def create_table(context, data_dict):
                 })
 
     fields = datastore_fields + supplied_fields + extra_fields
-
-    fields = get_unique_fields(fields)
 
     sql_fields = u", ".join([u'{0} {1}'.format(
         identifier(f['id']), f['type']) for f in fields])
