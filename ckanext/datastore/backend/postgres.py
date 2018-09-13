@@ -5,6 +5,7 @@ import logging
 import sys
 import sqlalchemy
 import os
+import sys
 import pprint
 import sqlalchemy.engine.url as sa_url
 import urllib
@@ -13,6 +14,7 @@ import urlparse
 import datetime
 import hashlib
 import json
+import re
 from cStringIO import StringIO
 
 import ckan.lib.cli as cli
@@ -86,6 +88,19 @@ is_single_statement = datastore_helpers.is_single_statement
 _engines = {}
 
 
+def get_unique_fields(dict_list):
+    result = []
+    ids = list(set([el['id'] for el in dict_list]))
+    for el in dict_list:
+        try:
+            if el['id'] in ids:
+                ids.remove(el['id'])
+                result.append(el)
+        except ValueError:
+            break
+    return result
+
+
 def literal_string(s):
     """
     Return s as a postgres literal string
@@ -129,7 +144,8 @@ def _dispose_engines():
 
 
 def _pluck(field, arr):
-    return [x[field] for x in arr]
+    result = [x[field] for x in arr]
+    return result
 
 
 def _rename_json_field(data_dict):
@@ -337,6 +353,7 @@ def _validate_record(record, num, field_names):
         raise ValidationError({
             'records': [u'row "{0}" is not a json object'.format(num)]
         })
+
     # check for extra fields in data
     extra_keys = set(record.keys()) - set(field_names)
 
@@ -848,8 +865,10 @@ def create_indexes(context, data_dict):
 
 
 def create_table(context, data_dict):
+
     '''Create table from combination of fields and first row of data.'''
 
+    max_field_length = 63
     datastore_fields = [
         {'id': '_id', 'type': 'serial primary key'},
         {'id': '_full_text', 'type': 'tsvector'},
@@ -865,9 +884,14 @@ def create_table(context, data_dict):
     fields_errors = []
 
     for field_id in field_ids:
-        # Postgres has a limit of 63 characters for a column name
-        if len(field_id) > 63:
-            message = u'Column heading "{0}" exceeds limit of 63 characters.'.format(field_id)
+
+        # Postgres has a limit of 63/33 (cyrillic) characters for a column name
+
+        if bool(re.search('[а-яА-Я]', field_id.encode('utf-8'))):
+            max_field_length = 33
+
+        if len(field_id) > max_field_length:
+            message = u'Column heading "{0}" exceeds limit of {1} characters.'.format(field_id, max_field_length)
             fields_errors.append(message)
 
     if fields_errors:
@@ -906,8 +930,12 @@ def create_table(context, data_dict):
                 })
 
     fields = datastore_fields + supplied_fields + extra_fields
+
+    fields = get_unique_fields(fields)
+
     sql_fields = u", ".join([u'{0} {1}'.format(
         identifier(f['id']), f['type']) for f in fields])
+
 
     sql_string = u'CREATE TABLE {0} ({1});'.format(
         identifier(data_dict['resource_id']),
@@ -1024,8 +1052,9 @@ def upsert_data(context, data_dict):
     method = data_dict.get('method', _UPSERT)
 
     fields = _get_fields(context, data_dict)
-    field_names = _pluck('id', fields)
     records = data_dict['records']
+
+    field_names = _pluck('id', fields)
     sql_columns = ", ".join(['"%s"' % name.replace(
         '%', '%%') for name in field_names] + ['"_full_text"'])
 
@@ -1426,6 +1455,7 @@ def upsert(context, data_dict):
     timeout = context.get('query_timeout', _TIMEOUT)
 
     trans = context['connection'].begin()
+
     try:
         # check if table already existes
         context['connection'].execute(
