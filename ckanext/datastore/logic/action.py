@@ -96,19 +96,6 @@ def datastore_create(context, data_dict):
 
     '''
 
-    # Crop field name up to 33 characters (cyrillic) or 63 (non cyrillic)
-    max_field_length = 63
-    for field in data_dict['fields']:
-        if bool(re.search('[а-яА-Я]', field['id'].encode('utf-8'))):
-            max_field_length = 33
-        for record in data_dict['records']:
-            try:
-                record[field['id'][:max_field_length].strip()] = record.pop(field['id'])
-            except KeyError:
-                continue
-        field['id'] = field['id'][:max_field_length].strip()
-
-
     backend = DatastoreBackend.get_active_backend()
     schema = context.get('schema', dsschema.datastore_create_schema())
     records = data_dict.pop('records', None)
