@@ -2,7 +2,6 @@
 
 import copy
 import logging
-import sys
 import sqlalchemy
 import os
 import sys
