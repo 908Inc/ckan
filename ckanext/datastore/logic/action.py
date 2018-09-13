@@ -2,6 +2,9 @@
 
 import logging
 import json
+import re
+
+from collections import Counter
 
 import sqlalchemy
 
@@ -24,7 +27,17 @@ _validate = ckan.lib.navl.dictization_functions.validate
 WHITELISTED_RESOURCES = ['_table_metadata']
 
 
+def _get_unique_fields(field_list):
+    counts = Counter(field_list)
+    for s, num in counts.items():
+        if num > 1:
+            for suffix in range(1, num + 1):
+                field_list[field_list.index(s)] = s + '_' + str(suffix)
+    return field_list
+
+
 def datastore_create(context, data_dict):
+
     '''Adds a new table to the DataStore.
 
     The datastore_create action allows you to post JSON data to be
@@ -82,6 +95,20 @@ def datastore_create(context, data_dict):
     See :ref:`fields` and :ref:`records` for details on how to lay out records.
 
     '''
+
+    # Crop field name up to 33 characters (cyrillic) or 63 (non cyrillic)
+    max_field_length = 63
+    for field in data_dict['fields']:
+        if bool(re.search('[а-яА-Я]', field['id'].encode('utf-8'))):
+            max_field_length = 33
+        for record in data_dict['records']:
+            try:
+                record[field['id'][:max_field_length].strip()] = record.pop(field['id'])
+            except KeyError:
+                continue
+        field['id'] = field['id'][:max_field_length].strip()
+
+
     backend = DatastoreBackend.get_active_backend()
     schema = context.get('schema', dsschema.datastore_create_schema())
     records = data_dict.pop('records', None)
