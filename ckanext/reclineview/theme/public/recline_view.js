@@ -42,6 +42,8 @@ this.ckan.module('recline_view', function (jQuery) {
 
       var errorMsg, dataset, map_config;
 
+       // Commented for jsonproxy use protection
+      /*
       if (!resourceData.datastore_active) {
           recline.Backend.DataProxy.timeout = 10000;
           resourceData.backend =  'dataproxy';
@@ -49,6 +51,10 @@ this.ckan.module('recline_view', function (jQuery) {
           resourceData.backend =  'ckan';
           resourceData.endpoint = jQuery('body').data('site-root') + 'api';
       }
+      */
+
+      resourceData.backend =  'ckan';
+      resourceData.endpoint = jQuery('body').data('site-root') + 'api';
 
       dataset = new recline.Model.Dataset(resourceData);
 
