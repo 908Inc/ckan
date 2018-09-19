@@ -27,7 +27,6 @@ this.ckan.module('image-upload', function($) {
     initialize: function () {
       $.proxyAll(this, /_on/);
       var options = this.options;
-
       // firstly setup the fields
       var field_upload = 'input[name="' + options.field_upload + '"]';
       var field_url = 'input[name="' + options.field_url + '"]';
@@ -69,7 +68,8 @@ this.ckan.module('image-upload', function($) {
         .insertAfter(this.input);
 
       // Button for resetting the form when there is a URL set
-      var removeText = this._('Remove');
+      var removeText = this.options.btn_title || this._('Remove');
+
       $('<a href="javascript:;" class="btn btn-danger btn-remove-url">'
         + removeText + '</a>')
         .prop('title', removeText)
