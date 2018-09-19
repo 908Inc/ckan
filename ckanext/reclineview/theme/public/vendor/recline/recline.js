@@ -20,6 +20,15 @@ this.recline.Backend.DataProxy = this.recline.Backend.DataProxy || {};
   // Load data from a URL via the [DataProxy](http://github.com/okfn/dataproxy).
   //
   // Returns array of field names and array of arrays for records
+
+
+  // Prevent JSON PROXY request
+
+  my.fetch = function (dataset) {
+    return null;
+  };
+
+  /*
   my.fetch = function(dataset) {
     var data = {
       url: dataset.url,
@@ -48,6 +57,7 @@ this.recline.Backend.DataProxy = this.recline.Backend.DataProxy || {};
     });
     return dfd.promise();
   };
+*/
 
   // ## _wrapInTimeout
   //
