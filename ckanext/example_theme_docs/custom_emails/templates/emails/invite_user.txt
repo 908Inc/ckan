@@ -1,4 +1,4 @@
-Dear {{ user_name }}, come join {{ site_title }}!
+Dear {{ user_name }} come join {{ site_title }}!
 
    {{ reset_link }}
 
