@@ -2414,7 +2414,7 @@ msgstr "Вибрати"
 
 #: ckan/templates/emails/invite_user.txt:1
 msgid "Dear"
-msgstr "Дорогий"
+msgstr "Шановний"
 
 #: ckan/templates/emails/invite_user.txt:3
 msgid "You have been invited to"
