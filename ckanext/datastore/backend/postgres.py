@@ -877,7 +877,8 @@ def create_table(context, data_dict):
             max_field_length = 33
 
         if len(field_id) > max_field_length:
-            message = u'Column heading "{0}" exceeds limit of {1} characters.'.format(field_id, max_field_length)
+            message = u'Column heading "{0}" exceeds limit'
+            'of {1} characters.'.format(field_id, max_field_length)
             fields_errors.append(message)
 
     if fields_errors:
@@ -919,7 +920,6 @@ def create_table(context, data_dict):
 
     sql_fields = u", ".join([u'{0} {1}'.format(
         identifier(f['id']), f['type']) for f in fields])
-
 
     sql_string = u'CREATE TABLE {0} ({1});'.format(
         identifier(data_dict['resource_id']),
