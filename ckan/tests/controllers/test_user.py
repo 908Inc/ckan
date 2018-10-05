@@ -577,9 +577,11 @@ class TestUserFollow(helpers.FunctionalTestBase):
                                      status=200)
         assert_true(user_one['display_name'] in followers_response)
 
-
 class TestUserSearch(helpers.FunctionalTestBase):
 
+    # Anon user can not access to user search
+
+    """
     def test_user_page_anon_access(self):
         '''Anon users can access the user list page'''
         app = self._get_test_app()
@@ -665,6 +667,7 @@ class TestUserSearch(helpers.FunctionalTestBase):
         search_response_html = BeautifulSoup(search_response.body)
         user_list = search_response_html.select('ul.user-list li')
         assert_equal(len(user_list), 0)
+    """
 
     def test_user_page_sysadmin_user(self):
         '''Sysadmin can search for users by email.'''
