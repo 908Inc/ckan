@@ -577,6 +577,7 @@ class TestUserFollow(helpers.FunctionalTestBase):
                                      status=200)
         assert_true(user_one['display_name'] in followers_response)
 
+
 class TestUserSearch(helpers.FunctionalTestBase):
 
     # Anon user can not access to user search
@@ -586,7 +587,7 @@ class TestUserSearch(helpers.FunctionalTestBase):
         app = self._get_test_app()
 
         user_url = url_for(controller='user', action='index')
-        response = app.get(user_url, status=400)
+        response = app.get(user_url, status=404)
         assert_equal(404, response.status_int)
 
     def test_sysadmin_page_lists_users(self):
