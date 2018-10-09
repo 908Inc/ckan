@@ -605,7 +605,8 @@ class TestUserSearch(helpers.FunctionalTestBase):
 
         user_response_html = BeautifulSoup(user_response.body)
         user_list = user_response_html.select('ul.user-list li')
-        assert_equal(len(user_list), 3)
+        print 'USER_NAMES: {}'.format(user_list)
+        assert_equal(len(user_list), 4)
 
         user_names = [u.text.strip() for u in user_list]
         assert_true('User One' in user_names)
@@ -651,11 +652,9 @@ class TestUserSearch(helpers.FunctionalTestBase):
         user_response = app.get(user_url, status=200, extra_environ=env)
         search_form = user_response.forms['user-search-form']
         search_form['q'] = 'useroneemail@example.com'
-        search_response = webtest_submit(search_form, status=200,
-                                         extra_environ=env)
+        search_response = webtest_submit(search_form, status=200)
 
         search_response_html = BeautifulSoup(search_response.body)
         user_list = search_response_html.select('ul.user-list li')
         assert_equal(len(user_list), 1)
         assert_equal(user_list[0].text.strip(), 'User One')
-
