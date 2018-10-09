@@ -613,7 +613,7 @@ class TestUserSearch(helpers.FunctionalTestBase):
         assert_true('User Three' in user_names)
 
     def test_sysadmin_page_search(self):
-        '''Anon users can search for users by username.'''
+        '''Sysadmin can search for users by username.'''
         app = self._get_test_app()
         sysadmin = factories.Sysadmin()
 
