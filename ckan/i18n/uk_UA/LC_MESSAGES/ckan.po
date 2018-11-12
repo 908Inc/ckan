@@ -3933,7 +3933,7 @@ msgstr "Показати лише популярні {facet_type}"
 
 #: ckan/templates/snippets/facet_list.html:87
 msgid "There are no {facet_type} that match this search"
-msgstr "Немає жодного {facet_type}, що збігається з параметрами пошуку"
+msgstr "Відсутні {facet_type}, що збігається з параметрами пошуку"
 
 #: ckan/templates/snippets/home_breadcrumb_item.html:2
 msgid "Home"
@@ -4029,7 +4029,7 @@ msgstr[2] "{number} груп, що знайдено для \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:22
 msgid "No groups found for \"{query}\""
-msgstr "Не знайдено жодних груп для \"{query}\""
+msgstr "Відсутні Групи, що співпадають з параметрами пошуку: \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:23
 msgid "{number} group found"
@@ -4040,7 +4040,7 @@ msgstr[2] " {number} груп"
 
 #: ckan/templates/snippets/search_result_text.html:24
 msgid "No groups found"
-msgstr "Не знайдено жодних груп"
+msgstr "Відсутні Групи, що співпадають з параметрами пошуку"
 
 #: ckan/templates/snippets/search_result_text.html:27
 msgid "{number} organization found for \"{query}\""
@@ -4051,7 +4051,7 @@ msgstr[2] " {number} розпорядників для \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:28
 msgid "No organizations found for \"{query}\""
-msgstr "Не знайдено жодного розпорядника для \"{query}\""
+msgstr "Відсутні Розпорядники, що співпадають з параметрами пошуку: \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:29
 msgid "{number} organization found"
