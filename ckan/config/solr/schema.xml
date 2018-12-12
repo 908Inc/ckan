@@ -168,6 +168,7 @@ schema. In this case the version should be set to the next CKAN version number.
          (rather than text type).  This allows us to sort on the titleString -->
     <field name="title_string" type="string" indexed="true" stored="false" />
 
+    <field name="status" type="text" indexed="false" stored="true" /> <!-- Fix harvesting object error -->
     <field name="data_dict" type="string" indexed="false" stored="true" />
     <field name="validated_data_dict" type="string" indexed="false" stored="true" />
 
