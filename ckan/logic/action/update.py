@@ -305,10 +305,13 @@ def package_update(context, data_dict):
     else:
         rev.message = _(u'REST API: Update object %s') % data.get("name")
 
-    #avoid revisioning by updating directly
-    model.Session.query(model.Package).filter_by(id=pkg.id).update(
-        {"metadata_modified": datetime.datetime.utcnow()})
-    model.Session.refresh(pkg)
+    # avoid revisioning by updating directly
+
+    # Checking last metadata_modified for avoid multi update
+    if pkg.metadata_modified < datetime.datetime.utcnow() - datetime.timedelta(minutes=1):
+        model.Session.query(model.Package).filter_by(id=pkg.id).update(
+            {"metadata_modified": datetime.datetime.utcnow()})
+        model.Session.refresh(pkg)
 
     pkg = model_save.package_dict_save(data, context)
 
